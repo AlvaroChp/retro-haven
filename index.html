@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bienvenido a Retro Haven, tu lugar para revivir la nostalgia de los videojuegos retro.">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="icon" href="img/favicon/rh.ico" type="image/x-icon">
+        <title>Retro Haven - Inicio</title><!--Todo el texto (salvo ciertas partes que he escrito yo mismo), datos e imágenes están extraidos de Wikipedia.org-->
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="codigo-secreto"></div>
+            <div id="easter-egg"></div>
+            <header>
+                <div class="cabecera">
+                <a href="index.html"><img src="img/logo_cabecera.png" alt="Logo Retro Haven"></a>
+                </div>
+                <div class="vhs">
+                    <img src="img/ruido.gif" alt="ruido">
+                </div>
+                <div id="reloj"></div>
+            </header>
+            <main>
+                <h1>Inicio</h1>
+                <!-- easter egg para jugones -->
+                <div id="contenido-secreto" style="display: none;">
+                    <p class="secret-message">¡SECRETO DESBLOQUEADO!<br>
+                        Has demostrado que eres un verdadero maestro de los juegos retro.</p>
+                    <a href="html/juego/doom.html" class="secret-link">DOOM</a>
+                </div>
+                <p>¡Bienvenido/a a RETRO HAVEN!<br><br>
+
+                En esta web encontrarás información sobre sistemas clásicos, curiosidades y todo lo que necesitas saber para revivir la magia de los videojuegos de antaño.</p>
+
+                <a href="html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
+                <nav>
+                    <a href="index.html"><img src="img/icon/pacmander.png" alt="icon"> Inicio</a>
+                    <a href="html/historia.html"><img src="img/icon/morido.png" alt="icon"> Historia</a>
+                    <a href="html/media.html"><img src="img/icon/morido.png" alt="icon"> Media</a>
+                    <a href="html/registro.html"><img src="img/icon/morido.png" alt="icon"> Registro</a>
+                    <div class="nav-item">
+                        <a href="html/consolas.html" id="consolas-link"><img src="img/icon/morido.png" alt="icon"> <br>Consolas</a>
+                        <div id="marcas-menu">
+                            <a href="html/marcas/nintendo.html">Nintendo</a>
+                            <a href="html/marcas/sony.html">Sony</a>
+                            <a href="html/marcas/sega.html">Sega</a>
+                            <a href="html/marcas/atari.html">Atari</a>
+                        </div>
+                    </div>
+                </nav>
+                <section class="retro-banner" aria-label="Galería de consolas retro">
+                    <div class="slider-wrapper">
+                        <div class="slider-track" id="sliderTrack">
+                            <figure>
+                                <img src="img/banner/atari2600.png" alt="Nintendo NES">
+                                <figcaption>Atari 2600</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/nes.png" alt="Super Nintendo">
+                                <figcaption>Nintendo NES</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/megadrive.png" alt="Mega Drive">
+                                <figcaption>Sega Mega Drive</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/ps1.png" alt="Mega Drive">
+                                <figcaption>Sony Play Station</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/dreamcast.png" alt="Mega Drive">
+                                <figcaption>Sega Dreamcast</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/gamecube.png" alt="Mega Drive">
+                                <figcaption>Nintendo GameCube</figcaption>
+                            </figure>
+
+                            <!-- repito las imágenes para que la animación sea continua -->
+
+                            <figure>
+                                <img src="img/banner/atari2600.png" alt="Nintendo NES">
+                                <figcaption>Atari 2600</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/nes.png" alt="Super Nintendo">
+                                <figcaption>Nintendo NES</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/megadrive.png" alt="Mega Drive">
+                                <figcaption>Sega Mega Drive</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/ps1.png" alt="Mega Drive">
+                                <figcaption>Sony Play Station</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/dreamcast.png" alt="Mega Drive">
+                                <figcaption>Sega Dreamcast</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="img/banner/gamecube.png" alt="Mega Drive">
+                                <figcaption>Nintendo GameCube</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div id="reproductor_musica">
+                <audio id="audio" loop>
+                <source src="audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+                </audio>
+                <button type="button" class="musiquita play" id="btnPlay">
+                <img src="img/musica/play.png" alt="Play">
+                </button>
+                <button type="button" class="musiquita pause" id="btnPause">
+                <img src="img/musica/pause.png" alt="Pause">
+                </button>
+            </div>
+            <footer class="footer">
+                <p>2024/2025 Álvaro Chillarón Prats. 1 GS DAM</p>
+            </footer>
+        </div>
+        <script src="JavaScript/items_javascript.js"></script>
+        <script src="JavaScript/reloj_calendario.js"></script>
+        <script src="JavaScript/animaciones.js"></script>
+        <script src="JavaScript/reproductor_musica.js"></script>
+        <script src="JavaScript/banner.js"></script>
+    </body>
+</html>
+
+<!--Todo el texto e imágenes están extraidas de Wikipedia.org-->

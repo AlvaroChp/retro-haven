@@ -1,0 +1,721 @@
+:root {
+  --ruido: url(../img/textura_ruido.png); /* variable para efecto tele vieja */
+  --color_oscuro: #191f1d; /* variable para el color del fondo */
+  --letra_texto: #949993; /* variable para el color del texto */
+  --letra_titulo: #ece0c8; /* variable para el color de los titulos */
+}
+
+html, body {
+  margin: 15px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: var(--color_oscuro); /* color oscuro para el fondo */
+  background-image: var(--ruido); /* efecto de ruido metido por variable de CSS*/
+  background-blend-mode: overlay; /* superpone texto e imagenes al fondo */
+}
+
+.vhs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* esto me asegura que esté encima de todo */
+  opacity: 0%; /* esto lo oculta */
+  pointer-events: none; /* esto evita que interfiera con clics */
+  transition: opacity 0.5s ease; /* transición suave */
+}
+
+/* seleccionar el GIF dentro del contenedor */
+.vhs img {
+  width: 100%; /* fuerza que ocupe toda la pantalla*/
+  height: 100%; /* fuerza que ocupe toda la pantalla*/
+}
+
+.cabecera {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  transition: 0.3s;
+  object-position: center;
+  display: block;
+  text-align: center;
+}
+
+.linkExterno {
+  text-justify: center;
+}
+
+/* esto muestra el GIF al pasar el ratón por la cabecera*/
+.cabecera:hover ~ .vhs {
+  opacity: 15%; /* hace visible el gif y se produce el efecto de tele vieja*/
+}
+
+.footer {
+  font-size: 100%;
+  text-align: center;
+  object-position: center;
+  display: block;
+}
+
+h1 {
+  font-family: "Mulish", sans-serif;
+  font-weight: 1000;
+  font-size: 200%;
+  color: var(--letra_titulo);
+}
+
+h2 {
+  font-family: "Mulish", sans-serif;
+  font-size: 150%;
+  color: var(--letra_texto); /* color de letra por variable de CSS*/
+}
+
+h3 {
+  font-family: "Mulish", sans-serif;
+  font-size: 125%;
+  color: var(--letra_texto); /* color de letra por variable de CSS*/
+}
+
+h4 {
+  font-family: "Mulish", sans-serif;
+  font-size: 110%;
+  color: var(--letra_texto); /* color de letra por variable de CSS*/
+}
+
+p {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  width: 420px;
+  color: var(--letra_texto); /* color de letra por variable de CSS*/
+}
+
+nav {
+  display: flex;
+  box-sizing: border-box;
+  margin: 3%;
+  gap: 48px;
+  
+}
+
+nav ul {
+  text-align: left;
+  font-size: 16px;
+}
+
+a {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 150%;
+  font-family: "Mulish", sans-serif;
+  color: var(--letra_texto);
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:not(.buy, .buy-cta, .learn) {
+  width: 64px;
+}
+
+a:hover:not(.buy, .buy-cta, .learn) { /* para que las letras tengan un brillo al poner el cursor encima*/
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0 0 15px #ece0c8;
+}
+
+.grid-container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 780px;
+  margin-top: 10px;
+}
+
+.boton1 {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px; /* separación uniforme */
+}
+
+.boton1 img {
+  border-radius: 12px; /* bordes redondeados */
+  height: 59px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.consolita {
+  transition: 0.3s;
+}
+
+.consolita:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.button {
+  background-color: transparent;
+  max-width: 100%;
+  display: block;
+  align-items: center;
+  line-height: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  transform: scale(1.05); /* Pequeño efecto de zoom */
+  transition: 0.5s;
+}
+
+/*BORRAR DESPUÉS DE APLICAR LA MODAL*/
+
+.content {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Mostrar contenido cuando el checkbox está activado */
+input[type="checkbox"]:checked + .button + .content {
+  display: block;
+}
+
+.consolas {
+margin-top: 5%;
+}
+
+/* estilo para el contenedor del video */
+.video-container {
+  max-width: 420px; /* Tamaño máximo del contenedor */
+  height: auto;
+  background-color: black; /* Fondo negro detrás del video */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta cualquier parte del video que sobresalga */
+}
+
+/* estilo para el video */
+.video {
+  width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajusta proporcionalmente */
+}
+
+
+/*ESTILOS PARA EL CONTENEDOR DE VÍDEO*/
+
+#galeria-videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.video-principal video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border: 4px solid #222;
+  border-radius: 8px;
+  display: block;
+}
+
+.miniaturas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.miniaturas video {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid #555;
+  border-radius: 6px;
+}
+
+.miniaturas video:hover {
+  transform: scale(1.2);
+  border-color: #fff;
+}
+
+
+/* ANIMACIONES */
+
+/* Easter Egg - Libretita */
+#codigo-secreto {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 1001;
+    background-color: transparent;
+    /* Para debug: descomenta esta línea si no la ves */
+    /* border: 1px solid red; */
+}
+
+#easter-egg {
+    position: fixed;
+    left: -35px;
+    bottom: -200px;
+    width: 400px;
+    height: 190px; 
+    background-image: url('../img/animaciones/codigo-konami.png');
+    background-size: 400px 190px; /* así fuerzo el tamaño exacto */
+    background-repeat: no-repeat;
+    transition: bottom 1s ease-in-out;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#easter-egg.visible {
+    bottom: -20px;
+    left: -35px;
+}
+
+/* Contenido secreto */
+.animaciones {
+  display: none;
+}
+
+.animaciones.visible {
+  display: block;
+}
+
+/* gif de Samus corriendo*/
+#samusCorriendo {
+  position: absolute;
+  left: 5%;
+  top: 40%; /* distancia desde la parte superior */
+  width: 200px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif del metroide amenazante*/
+#metroidePeligroso {
+  position: absolute;
+  right: 5%;
+  top: 40%; /* distancia desde la parte superior */
+  width: 200px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif de Pac-Man comiendo*/
+#pacmanZampando {
+  position: absolute;
+  left: 5%;
+  top: 40%; /* distancia desde la parte superior */
+  width: 180px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif del fantasma huyendo*/
+#fantasmaHuyendo {
+  position: absolute;
+  right: 5%;
+  top: 40%; /* distancia desde la parte superior */
+  width: 150px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif de Mario caminando*/
+#marioCaminando {
+  position: absolute;
+  left: 5%;
+  top: 45%; /* distancia desde la parte superior */
+  width: 150px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif de Bowser atacando*/
+#bowserAtacando {
+  position: absolute;
+  right: 5%;
+  top: 25%; /* distancia desde la parte superior */
+  width: 600px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif de Doomguy explotando*/
+#doomguyExplotando {
+  position: absolute;
+  left: 5%;
+  top: 50%; /* distancia desde la parte superior */
+  width: 250px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+/* gif del Cyberdemon disparando*/
+#cyberdemonDisparando {
+  position: absolute;
+  right: 5%;
+  top: 30%; /* distancia desde la parte superior */
+  width: 400px; /* ajuste de tamaño */
+  cursor: pointer;
+}
+
+
+/* ÍTEMS JAVASCRIPT */
+
+/*estilo para el reloj*/
+#reloj {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  user-select: none; /*para que no se pueda seleccionar el texto*/
+  z-index: 9999; /*Que esté siempre encima*/
+}
+
+
+/*estilo para el reproductor de audio */
+#reproductor_musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo con algo de transparencia */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.audio {
+  width: 0;
+  height: 0;
+}
+
+/* estilo general de los botones de play y pause */
+#reproductor_musica button {
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Botón play: verde */
+#reproductor_musica button.play {
+  background-color: #257928;
+  margin-right: 2px;
+}
+
+#reproductor_musica button.play:hover{
+  transform: scale(1.1);
+}
+
+#reproductor_musica button.play img{
+  width: 10px;
+}
+
+/* Botón pause: rojo */
+#reproductor_musica button.pause {
+  background-color: #ce2424;
+  margin-left: 2px;
+}
+
+#reproductor_musica button.pause:hover{
+  transform: scale(1.10);
+}
+
+#reproductor_musica button.pause img{
+  width: 10px;
+}
+
+/* estilos para el menú desplegable */
+.nav-item {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+#marcas-menu {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* así aparece encima de Consolas y no deforma la página */
+  left: 50%;
+  transform: translateX(-50%); /*así queda centrdo horizontalmente */
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  animation: floatUp 0.3s ease-out;
+}
+
+#marcas-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.2s;
+}
+
+#marcas-menu a:hover {
+  padding-left: 25px; /*efecto de desplazamiento para que se note*/
+}
+
+/* animación de flotación hacia arriba, idea sacada de otra página */
+@keyframes floatUp {
+  from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* triángulo decorativo para el desplegable, idea sacada de otra página */
+#marcas-menu::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+}
+
+/* estilos para el banner */
+
+.retro-banner {
+  text-align: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.retro-banner h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.slider-wrapper {
+  width: 660px; /* 3 imágenes de 220px ancho */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid white;
+  position: relative;
+  height: 140px; /* altura fija */
+}
+
+.slider-track {
+  display: flex;
+  width: calc(220px * 12); /* 12 imágenes (6 + 6 repetidas) */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: none;
+}
+
+.slider-track figure {
+  flex: 0 0 220px;
+  margin: 0;
+  text-align: center;
+  color: #ccc;
+}
+
+.slider-track img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* MODAL PARA MODELOS DE CONSOLAS*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 40px 20px;
+}
+
+.modal-contenido {
+  background-color: var(--color_oscuro);
+  color: var(--letra_texto);
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.modal-contenido img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.cerrar {
+  color: var(--letra_texto);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cerrar:hover {
+  color: red;
+}
+
+/* estilos para el formulario de registro*/
+
+.registro {
+  margin: 0;
+  padding: 0;
+  font-size: 135%;
+  font-family: "Mulish", sans-serif;
+  color: var(--letra_texto);
+}
+
+.contador-caracteres {
+    font-size: 0.8em;
+    color: #666;
+    text-align: left;
+    margin-left: 15%;
+    margin-top: 3px;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.error {
+    border: 1px solid red !important;
+}
+
+.imagen-consola {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.imagen-consola img {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+#descripcion-consola {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.campo-consolas {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+/* Estilos para el easter egg */
+
+#contenido-secreto {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    display: none;
+}
+
+.secret-message {
+    color: #ffd700;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px #ff0000;
+    margin-left: 17%;
+    text-align: center;
+}
+
+.secret-link {
+    padding: 10px 40px;
+    background: #8b0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.secret-link:hover {
+    background: #ff0000;
+    transform: scale(1.05);
+}
+
+/*botón del link a la API de la ubicación*/
+
+.boton_ubicacion {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: max-content;
+  color: white;
+  padding: 10px 10px;
+  display: inline-flex;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+/* Aplicar solo al texto */
+.boton_ubicacion .texto_hover {
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.boton_ubicacion:hover .texto_hover {
+  transform: scale(1.05);
+}

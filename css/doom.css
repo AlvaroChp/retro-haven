@@ -1,0 +1,119 @@
+* {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  cursor: none;
+}
+
+/* controles iniciales */
+#controlesIniciales {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9997; /*así sale por debajo de la mirilla*/
+}
+
+#controlesIniciales button {
+  padding: 15px 30px;
+  font-size: 25px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#controlesIniciales button:hover {
+  background-color: #720000;
+  transform: scale(1.05);
+}
+
+/* ESCOPETA */
+#escopetaDoom {
+    position: fixed;
+    bottom: 0;
+    width: 800px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+/* MIRILLA */
+#mirilla {
+    cursor: none;
+    position: fixed;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    z-index: 9998; /* */
+}
+
+/* enemigos (ocultos inicialmente) */
+.enemigo {
+  display: none;
+}
+
+/* enemigo GRANDE */
+.enemigo.doomguy-grande {
+  position: absolute;
+  bottom: 10%;
+  width: 400px;
+  pointer-events: auto;
+  z-index: 550;
+  left: -300px;
+}
+
+/* enemigo MEDIANO */
+.enemigo.doomguy {
+  position: absolute;
+  top: 40%;
+  width: 300px;
+  pointer-events: auto;
+  z-index: 400;
+  left: -300px;
+  transform: translateY(-50%);
+}
+
+/* Enemigo PEQUEÑO */
+.enemigo.doomguy-pequeño {
+  position: absolute;
+  top: 10%;
+  width: 200px;
+  pointer-events: auto;
+  z-index: 300;
+  left: -300px;
+}
+
+.enemigo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#contadorEnemigos {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 15px;
+  border-radius: 8px;
+  z-index: 9999;
+  user-select: none;
+}
+
+#contadorEnemigos div {
+  margin: 5px 0;
+}

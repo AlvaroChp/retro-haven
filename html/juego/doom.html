@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DOOM</title>
+  <link rel="stylesheet" href="../../css/doom.css">
+</head>
+<body>
+
+  <div id="controlesIniciales">
+    <button id="Jugar">Jugar</button>
+    <button id="Volver">Volver a Inicio</button>
+  </div>
+
+  <audio id="audio" loop>
+    <source src="../../audio/doom.mp3" type="audio/mp3">
+  </audio>
+
+  <div id="contadorEnemigos">
+    <div>Vencidos: <span id="vencidos">0</span></div>
+    <div>Escapados: <span id="escapados">0</span></div>
+  </div>
+
+  <img id="mirilla" src="../../img/animaciones/mirilla_roja.png" alt="Mirilla">
+
+  <div class="animaciones">
+    <img id="escopetaDoom" src="../../img/animaciones/supershotgun_quieta.gif" alt="Haz click para disparar">
+  </div>
+
+  <div class="enemigo doomguy-pequeño">
+    <img id="doomguyPequeño" src="../../img/animaciones/doomguy_quieto.gif" alt="Haz click para que Doomguy pequeño explote">
+  </div>
+
+  <div class="enemigo doomguy">
+    <img id="doomguyExplotando" src="../../img/animaciones/doomguy_quieto.gif" alt="Haz click para que Doomguy explote">
+  </div>
+
+  <div class="enemigo doomguy-grande">
+    <img id="doomguyGrande" src="../../img/animaciones/doomguy_quieto.gif" alt="Haz click para que Doomguy grande explote">
+  </div>
+
+  <script src="../../JavaScript/doom.js"></script>
+</body>
+</html>

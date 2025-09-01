@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bienvenido a Retro Haven, tu lugar para revivir la nostalgia de los videojuegos retro.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+
+        <title>Retro Haven - Nintendo</title><!--Todo el texto (salvo ciertas partes que he escrito yo mismo), datos e imágenes están extraidos de Wikipedia.org-->
+    </head>
+    <body>
+        <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/Nintendo"><h3>NINTENDO</h3></a></div>
+        <p>Nintendo Company, Ltd. (任天堂株式会社 Nintendō Kabushiki-gaisha) es una empresa de entretenimiento dedicada a la investigación, desarrollo y distribución de software y hardware de videojuegos y juegos de cartas, con sede en Kioto, Japón.</p>
+        <div id="wrapper">
+            <header>
+                <div id="reloj"></div>
+            </header>
+            <main>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
+                <div class="grid-container">
+                    <!-- NES -->
+                    <button class="button" onclick="abrirModal('modalNES')">
+                        <img src="../../img/logotipos/nes_logo.png" alt="Logo NES">
+                    </button>
+                    <div id="modalNES" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalNES')">&times;</span>
+                            <h3>NES</h3>
+                            <p>
+                                Nintendo Entertainment System (también conocida como Nintendo NES o simplemente NES), llamada en Japón como Family Computer (ファミリーコンピュータ?), abreviado comúnmente como Famicom (ファミコン), es una videoconsola descontinuada de 8 bits perteneciente a la tercera generación en la industria de los videojuegos, la primera consola de sobremesa de Nintendo en emplear cartuchos. Fue lanzada por Nintendo en Norteamérica, Europa y Australia entre 1985 y 1987.
+                                <br><br>18.000.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/nes.png" alt="NES">
+                        </div>
+                    </div>
+
+                    <!-- SNES -->
+                    <button class="button" onclick="abrirModal('modalSNES')">
+                        <img src="../../img/logotipos/snes_logo.png" alt="Logo SNES">
+                    </button>
+                    <div id="modalSNES" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalSNES')">&times;</span>
+                            <h3>Super Nintendo</h3>
+                            <p>
+                                La Super Nintendo Entertainment System, conocida popularmente como la Super Nintendo, también llamada la Super Famicom (スーパーファミコン) en Japón, nombrada oficialmente de forma abreviada como la Super NES o SNES en América y Super Nintendo en Europa.
+                                Fue descontinuada en el año 1999 (2003 en Japón) y años más tarde, fue relanzada virtualmente a través de la Consola Virtual en la Wii en 2006, Wii U en 2013, Nintendo 3DS (solo la versión New) en 2016 y Nintendo Switch en 2019 a través del servicio en línea Nintendo Switch Online.
+                                <br><br>49.100.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/s-nes.png" alt="SNES">
+                        </div>
+                    </div>
+
+                    <!-- N64 -->
+                    <button class="button" onclick="abrirModal('modalN64')">
+                        <img src="../../img/logotipos/n64_logo.png" alt="Logo N64">
+                    </button>
+                    <div id="modalN64" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalN64')">&times;</span>
+                            <h3>Nintendo 64</h3>
+                            <p>
+                                La Nintendo 64 (ニンテンドウ64) es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D. Compitió en el mercado de la quinta generación con Saturn de Sega y PlayStation de Sony; esta última, creada a partir de diseños descartados previamente por Nintendo.
+                                Incorporó en su arquitectura un procesador principal de 64 bits. El soporte de almacenamiento de los juegos era en forma de cartuchos, la mayoría de ellos con memoria interna. El uso de este tipo de almacenamiento le supuso una seria desventaja comercial frente a sus competidores, ya que encarecía los costes de producción lo que aumentaba el precio final y además era de una capacidad de almacenamiento menor al de un CD-ROM.
+                                <br><br>32.930.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/n64.png" alt="Nintendo 64">
+                        </div>
+                    </div>
+
+                    <!-- GameCube -->
+                    <button class="button" onclick="abrirModal('modalGameCube')">
+                        <img src="../../img/logotipos/gamecube_logo.png" alt="Logo GameCube">
+                    </button>
+                    <div id="modalGameCube" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalGameCube')">&times;</span>
+                            <h3>GameCube</h3>
+                            <p>
+                                Nintendo GameCube (ニンテンドーゲームキューブ Nintendō GēmuKyūbu) también llamada simplemente la GameCube y abreviada como GCN en América y NGC en Japón, es la quinta consola descontinuada de sobremesa hecha por Nintendo. Fue la sucesora de la Nintendo 64 y la predecesora de la Wii.
+                                Su principal característica fue su procesador central basado en un IBM PowerPC (tecnología previa utilizada en computadoras personales y portátiles), y su procesador gráfico desarrollado por ATI Technologies. Nintendo, por primera vez, prescindió del cartucho (ROM) como formato de almacenamiento, y adoptó un formato óptico propio, el Nintendo Optical Disc. El nombre «GameCube» se debió a que el sistema tuvo la forma de un cubo. Fue además la primera consola de Nintendo que no contó en su fecha de lanzamiento con un juego de Mario, mascota oficial de la compañía.
+                                <br><br>21.740.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/gamecube.png" alt="GameCube">
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <h3>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h3>
+                </nav>
+            </main>
+        </div>
+            <div id="reproductor_musica">
+                <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+                </audio>
+                <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+                </button>
+                <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+                </button>
+            </div>
+        <footer class="footer">
+            <p>2024/2025 Álvaro Chillarón Prats. 1 GS DAM</p>
+        </footer>
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>
+
+<!--Todo el texto e imágenes están extraidas de Wikipedia.org-->
