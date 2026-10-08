@@ -42,36 +42,59 @@ function generarColorOscuro() {
 
 //MENÚ DESPLEGABLE EN LA BARRA DE NAVEGACIÓN EN "Consolas"
 
-const consolasLink = document.getElementById('consolas-link');
+document.addEventListener('DOMContentLoaded', () => {
+    const consolasLink = document.getElementById('consolas-link');
     const marcasMenu = document.getElementById('marcas-menu');
+
+    if (!consolasLink || !marcasMenu) {
+        actualizarFooter();
+        return;
+    }
+
     let menuTimeout;
 
-//mostrar menú al hacer hover
-consolasLink.addEventListener('mouseenter', function() {
-    clearTimeout(menuTimeout);
-    marcasMenu.style.display = 'block';
-});
+    //mostrar menú al hacer hover
+    consolasLink.addEventListener('mouseenter', function() {
+        clearTimeout(menuTimeout);
+        marcasMenu.style.display = 'block';
+    });
 
-// esto oculta el menú con retraso para que no se cierre al momento si quitas el ratón de encima
-consolasLink.parentElement.addEventListener('mouseleave', function() {
-    menuTimeout = setTimeout(() => {
+    // esto oculta el menú con retraso para que no se cierre al momento si quitas el ratón de encima
+    consolasLink.parentElement?.addEventListener('mouseleave', function() {
+        menuTimeout = setTimeout(() => {
+            marcasMenu.style.display = 'none';
+        }, 200); // 200 milisegundos de retraso
+    });
+
+    // así se mantiene visible el desplegable si el ratón entra en el menú
+    marcasMenu.addEventListener('mouseenter', function() {
+        clearTimeout(menuTimeout);
+    });
+
+    //ocultar al salir del menú
+    marcasMenu.addEventListener('mouseleave', function() {
+        menuTimeout = setTimeout(() => {
+            marcasMenu.style.display = 'none';
+        }, 200); // 200 milisegundos de retraso
+    });
+
+    // con esto el click en "Consolas" funciona con normalidad
+    consolasLink.addEventListener('click', function() {
         marcasMenu.style.display = 'none';
-    }, 200); // 200 milisegundos de retraso
+    });
+
+    actualizarFooter();
 });
 
-// así se mantiene visible el desplegable si el ratón entra en el menú
-marcasMenu.addEventListener('mouseenter', function() {
-    clearTimeout(menuTimeout);
-});
+// esto actualiza dinámicamente el año de todos los footer
+const actualizarFooter = () => {
+    const anioActual = new Date().getFullYear();
+    const footers = document.querySelectorAll('footer');
 
-//ocultar al salir del menú
-marcasMenu.addEventListener('mouseleave', function() {
-    menuTimeout = setTimeout(() => {
-        marcasMenu.style.display = 'none';
-    }, 200); // 200 milisegundos de retraso
-});
-
-// con esto el click en "Consolas" funciona con normalidad
-consolasLink.addEventListener('click', function() {
-    marcasMenu.style.display = 'none';
-});
+    footers.forEach(footer => {
+        const parrafo = footer.querySelector('p');
+        if (parrafo) {
+            parrafo.textContent = `${anioActual} Álvaro Chillarón Prats`;
+        }
+    });
+};

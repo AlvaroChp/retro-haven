@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bienvenido a Retro Haven, tu lugar para revivir la nostalgia de los videojuegos retro.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+
+        <title>Retro Haven - Microsoft</title><!--Todo el texto (salvo ciertas partes que he escrito yo mismo), datos e imágenes están extraidos de Wikipedia.org-->
+    </head>
+    <body>
+        <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/Microsoft"><h3>MICROSOFT</h3></a></div>
+        <p>Microsoft Corporation es una empresa tecnológica multinacional estadounidense, conocida por desarrollar software, hardware y servicios relacionados con la informática, siendo la compañía detrás de Windows, Xbox y una enorme parte del ecosistema de PC.</p>
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
+                <div id="reloj"></div>
+            </header>
+            <main>
+                <div class="grid-container">
+                    <!-- Xbox -->
+                    <button class="button" onclick="abrirModal('modalXbox')">
+                        <img src="../../img/logotipos/modelos/logo_xbox.png" alt="Logo Microsoft">
+                    </button>
+                    <div id="modalXbox" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalXbox')">&times;</span>
+                            <h3>Xbox</h3>
+                            <p>
+                                Xbox es la primera videoconsola de sobremesa fabricada por Microsoft, lanzada en 2001. Surgió como una apuesta para competir con Sony PlayStation 2 y Nintendo GameCube, y marcó el inicio de la presencia de Microsoft en el mercado de los videojuegos.
+                                <br><br>24.000.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/xbox.png" alt="Xbox">
+                        </div>
+                    </div>
+
+                    <!-- Xbox 360 -->
+                    <button class="button" onclick="abrirModal('modalXbox360')">
+                        <img src="../../img/logotipos/modelos/logo_xbox360.png" alt="Xbox 360">
+                    </button>
+                    <div id="modalXbox360" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalXbox360')">&times;</span>
+                            <h3>Xbox 360</h3>
+                            <p>
+                                La Xbox 360 fue lanzada en 2005 y se convirtió en una de las consolas más exitosas de la generación 7. Ofreció una gran variedad de servicios online, incluyendo Xbox Live, y dio continuidad a la presencia de Microsoft en el mercado doméstico.
+                                <br><br>84.000.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/xbox360.png" alt="Xbox 360">
+                        </div>
+                    </div>
+
+                    <!-- Xbox One -->
+                    <button class="button" onclick="abrirModal('modalXboxOne')">
+                        <img src="../../img/logotipos/modelos/logo_xboxone.png" alt="Xbox One">
+                    </button>
+                    <div id="modalXboxOne" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalXboxOne')">&times;</span>
+                            <h3>Xbox One</h3>
+                            <p>
+                                Xbox One llegó en 2013 como la siguiente generación de consolas de Microsoft. Diseñada para ofrecer una experiencia más conectada y enfocada en servicios en línea, representó un salto importante en la era de la multimedia y el juego digital.
+                                <br><br>58.000.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/xboxone.png" alt="Xbox One">
+                        </div>
+                    </div>
+
+                    <!-- Xbox Series X|S -->
+                    <button class="button" onclick="abrirModal('modalXboxSeries')">
+                        <img src="../../img/logotipos/modelos/logo_xboxseries.png" alt="Xbox Series X|S">
+                    </button>
+                    <div id="modalXboxSeries" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalXboxSeries')">&times;</span>
+                            <h3>Xbox Series X|S</h3>
+                            <p>
+                                Lanzadas en 2020, Xbox Series X y Series S son las consolas actuales de Microsoft. Ofrecen un rendimiento más potente, compatibilidad con generaciones anteriores y un enfoque claro en la velocidad y la experiencia de juego en la era del acceso digital.
+                                <br><br>Más de 30.000.000 unidades vendidas en total.
+                            </p>
+                            <img src="../../img/consolas/xboxseriess.png" alt="Xbox Series S">
+                            <img src="../../img/consolas/xboxseriesx.png" alt="Xbox Series X">
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <h3>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h3>
+                </nav>
+            </main>
+        </div>
+            <div id="reproductor_musica">
+                <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+                </audio>
+                <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+                </button>
+                <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+                </button>
+            </div>
+        <footer class="footer"></footer>
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>
+
+<!--Todo el texto e imágenes están extraidas de Wikipedia.org-->

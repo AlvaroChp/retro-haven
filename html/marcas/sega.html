@@ -9,20 +9,34 @@
         <title>Retro Haven - Sega</title><!--Todo el texto e imágenes están extraidas de Wikipedia.org-->
     </head>
     <body>
-        <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/Sega"><h3>SEGA</h3></a></div>
+        <div class="linkExterno"><a href="https://wikipedia.org"><h3>SEGA</h3></a></div>
         <p>Sega Corporation (estilizado SEGA) es una multinacional japonesa de desarrollo y distribución de videojuegos con sede en Shinagawa (Tokio). Sus dos filiales internacionales, Sega América y Sega Europa, tienen sus sedes en Irvine (California) y Londres, respectivamente.</p>
-
         <div id="wrapper">
             <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
                 <div id="reloj"></div>
             </header>
             <main>
-                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
                 <div class="grid-container">
+                    <!-- SG-1000 -->
+                    <button class="button" onclick="abrirModal('modalSG1000')">
+                        <img src="../../img/logotipos/modelos/logo_sg1000.png" alt="SG-1000 Logo">
+                    </button>
+                    <div id="modalSG1000" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalSG1000')">&times;</span>
+                            <h3>SG-1000</h3>
+                            <p>
+                                Primera videoconsola de sobremesa desarrollada por Sega, perteneciente a la tercera generación. Fue lanzada al mercado en Japón en 1983 para competir directamente con la Famicom de Nintendo. Sirvió como punto de partida para la incursión de Sega en el mercado doméstico.<br><br>
+                                160.000 unidades vendidas en su primer año.
+                            </p>
+                            <img src="../../img/consolas/sg1000.png" alt="SG-1000">
+                        </div>
+                    </div>
 
                     <!-- Master System -->
                     <button class="button" onclick="abrirModal('modalMasterSystem')">
-                        <img src="../../img/logotipos/logo_mastersystem.png" alt="Master System Logo">
+                        <img src="../../img/logotipos/modelos/logo_mastersystem.png" alt="Master System Logo">
                     </button>
                     <div id="modalMasterSystem" class="modal">
                         <div class="modal-contenido">
@@ -38,7 +52,7 @@
 
                     <!-- Mega Drive -->
                     <button class="button" onclick="abrirModal('modalMegaDrive')">
-                        <img src="../../img/logotipos/logo_megadrive.png" alt="Mega Drive Logo">
+                        <img src="../../img/logotipos/modelos/logo_megadrive.png" alt="Mega Drive Logo">
                     </button>
                     <div id="modalMegaDrive" class="modal">
                         <div class="modal-contenido">
@@ -54,7 +68,7 @@
 
                     <!-- Sega Saturn -->
                     <button class="button" onclick="abrirModal('modalSaturn')">
-                        <img src="../../img/logotipos/logo_segasaturn.png" alt="Sega Saturn Logo">
+                        <img src="../../img/logotipos/modelos/logo_segasaturn.png" alt="Sega Saturn Logo">
                     </button>
                     <div id="modalSaturn" class="modal">
                         <div class="modal-contenido">
@@ -70,7 +84,7 @@
 
                     <!-- Dreamcast -->
                     <button class="button" onclick="abrirModal('modalDreamcast')">
-                        <img src="../../img/logotipos/logo_dreamcast.png" alt="Dreamcast Logo">
+                        <img src="../../img/logotipos/modelos/logo_dreamcast.png" alt="Dreamcast Logo">
                     </button>
                     <div id="modalDreamcast" class="modal">
                         <div class="modal-contenido">
@@ -91,22 +105,20 @@
             </main>
         </div>
 
-            <div id="reproductor_musica">
-                <audio id="audio" loop>
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
                 <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
                 Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
-                </audio>
-                <button type="button" class="musiquita play" id="btnPlay">
+            </audio>
+            <button type="button" class="musiquita play" id="btnPlay">
                 <img src="../../img/musica/play.png" alt="Play">
-                </button>
-                <button type="button" class="musiquita pause" id="btnPause">
+            </button>
+            <button type="button" class="musiquita pause" id="btnPause">
                 <img src="../../img/musica/pause.png" alt="Pause">
-                </button>
-            </div>
+            </button>
+        </div>
 
-        <footer class="footer">
-            <p>2024/2025 Álvaro Chillarón Prats. 1 GS DAM</p>
-        </footer>
+        <footer class="footer"></footer>
         <script src="../../JavaScript/items_javascript.js"></script>
         <script src="../../JavaScript/reloj_calendario.js"></script>
         <script src="../../JavaScript/reproductor_musica.js"></script>

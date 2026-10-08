@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('audio');
   const btnPlay = document.getElementById('btnPlay');
   const btnPause = document.getElementById('btnPause');
+
+  if (!audio || !btnPlay || !btnPause) {
+    return;
+  }
   
     //botón para play
   btnPlay.addEventListener('click', () => {

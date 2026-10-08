@@ -10,19 +10,17 @@
     </head>
     <body>
         <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/Sony_Interactive_Entertainment"><h3>SONY</h3></a></div>
-        <p>
-            Sony Interactive Entertainment (SIE), anteriormente conocido como Sony Computer Entertainment, es un desarrollador multinacional de videojuegos y filial propia del Grupo de Productos y Servicios al Consumidor de Sony Corporation.
-        </p>
+        <p>Sony Interactive Entertainment (SIE), anteriormente conocido como Sony Computer Entertainment, es un desarrollador multinacional de videojuegos y filial propia del Grupo de Productos y Servicios al Consumidor de Sony Corporation.</p>
         <div id="wrapper">
             <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
                 <div id="reloj"></div>
             </header>
             <main>
-                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
                 <div class="grid-container">
                     <!-- PS1 -->
                     <button class="button" onclick="abrirModal('modalPS1')">
-                        <img src="../../img/logotipos/logo_ps1.png" alt="Logo PS1">
+                        <img src="../../img/logotipos/modelos/logo_ps1.png" alt="Logo PS1">
                     </button>
                     <div id="modalPS1" class="modal">
                         <div class="modal-contenido">
@@ -38,7 +36,7 @@
 
                     <!-- PS2 -->
                     <button class="button" onclick="abrirModal('modalPS2')">
-                        <img src="../../img/logotipos/logo_ps2.png" alt="Logo PS2">
+                        <img src="../../img/logotipos/modelos/logo_ps2.png" alt="Logo PS2">
                     </button>
                     <div id="modalPS2" class="modal">
                         <div class="modal-contenido">
@@ -49,6 +47,52 @@
                                 160.000.000 unidades vendidas.
                             </p>
                             <img src="../../img/consolas/ps2.png" alt="Consola PS2">
+                        </div>
+                    </div>
+                    <!-- PS3 -->
+                    <button class="button" onclick="abrirModal('modalPS3')">
+                        <img src="../../img/logotipos/modelos/logo_ps3.png" alt="PlayStation 3">
+                    </button>
+                    <div id="modalPS3" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalPS3')">&times;</span>
+                            <h3>PlayStation 3 (PS3)</h3>
+                            <p>
+                                La PlayStation 3 fue lanzada en 2006 y supuso una gran evolución en potencia gráfica y multimedia. Aprovechó el sistema Blu-ray, conectividad online y un catálogo masivo de exclusivas. Compitió con Xbox 360 y Nintendo Wii durante la era de la séptima generación.<br><br>
+                                87,4 millones de unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/ps3.png" alt="Consola PS3">
+                        </div>
+                    </div>
+                    <!-- PS4 -->
+                    <button class="button" onclick="abrirModal('modalPS4')">
+                        <img src="../../img/logotipos/modelos/logo_ps4.png" alt="PlayStation 4">
+                    </button>
+                    <div id="modalPS4" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalPS4')">&times;</span>
+                            <h3>PlayStation 4 (PS4)</h3>
+                            <p>
+                                La PlayStation 4 fue lanzada en 2013 y se convirtió en una de las consolas más exitosas de la historia. Destacó por su rendimiento, sus servicios online con PlayStation Network y por su enorme biblioteca de juegos, aunque también por su enfoque en la experiencia social y la transmisión en directo.<br><br>
+                                117,2 millones de unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/ps4.png" alt="Consola PS4">
+                        </div>
+                    </div>
+
+                    <!-- PS5 -->
+                    <button class="button" onclick="abrirModal('modalPS5')">
+                        <img src="../../img/logotipos/modelos/logo_ps5.png" alt="PlayStation 5">
+                    </button>
+                    <div id="modalPS5" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalPS5')">&times;</span>
+                            <h3>PlayStation 5 (PS5)</h3>
+                            <p>
+                                La PlayStation 5 llegó en 2020 como la consola de nueva generación de Sony. Incorporó un hardware muy potente, tiempos de carga reducidos con SSD, soporte para resolución 4K/8K y un enfoque claro en la innovación de la experiencia de juego, además de ofrecer compatibilidad con versiones anteriores en parte del catálogo.<br><br>
+                                Más de 60 millones de unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/ps5.png" alt="Consola PS5">
                         </div>
                     </div>
                 </div>
@@ -69,9 +113,9 @@
                 <img src="../../img/musica/pause.png" alt="Pause">
                 </button>
             </div>
-        <footer class="footer">
-            <p>2024/2025 Álvaro Chillarón Prats. 1 GS DAM</p>
-        </footer>
+            <footer class="footer">
+                <p><span id="anio-actual"></span> © Álvaro Chillarón Prats</p>
+            </footer>
         <script src="../../JavaScript/items_javascript.js"></script>
         <script src="../../JavaScript/reloj_calendario.js"></script>
         <script src="../../JavaScript/reproductor_musica.js"></script>

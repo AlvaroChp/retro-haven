@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+    const headings = document.querySelectorAll("summary h2");
+
+    if (!headings.length) {
+        return;
+    }
+
     // textos que aparecerán en los tooltips
     const tooltips = {
         "Primera Generación (1970s)": "Inicio de las consolas: Magnavox Odyssey y Pong.",
@@ -27,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tooltip.style.transition = "opacity 0.2s";
     document.body.appendChild(tooltip);
 
-    document.querySelectorAll("summary h2").forEach(h2 => {
+    headings.forEach(h2 => {
         
         //esto activa el tooltip al pasar por encima de los elementos de la lista
         h2.addEventListener("mouseover", (e) => {

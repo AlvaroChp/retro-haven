@@ -22,7 +22,7 @@
                 <div id="reloj"></div>
             </header>
             <main>
-                <h1>Inicio</h1>
+                <h1>INICIO</h1>
                 <!-- easter egg para jugones -->
                 <div id="contenido-secreto" style="display: none;">
                     <p class="secret-message">¡SECRETO DESBLOQUEADO!<br>
@@ -39,71 +39,26 @@
                     <a href="html/historia.html"><img src="img/icon/morido.png" alt="icon"> Historia</a>
                     <a href="html/media.html"><img src="img/icon/morido.png" alt="icon"> Media</a>
                     <a href="html/registro.html"><img src="img/icon/morido.png" alt="icon"> Registro</a>
+                    <a href="html/consolas.html" id="consolas-link"><img src="img/icon/morido.png" alt="icon"> Consolas</a>
                     <div class="nav-item">
-                        <a href="html/consolas.html" id="consolas-link"><img src="img/icon/morido.png" alt="icon"> <br>Consolas</a>
                         <div id="marcas-menu">
                             <a href="html/marcas/nintendo.html">Nintendo</a>
                             <a href="html/marcas/sony.html">Sony</a>
                             <a href="html/marcas/sega.html">Sega</a>
                             <a href="html/marcas/atari.html">Atari</a>
+                            <a href="marcas/snk.html">SNK</a>
+                            <a href="marcas/microsoft.html">Microsoft</a>
+                            <a href="marcas/magnavox.html">Magnavox</a>
+                            <a href="marcas/mattel.html">Mattel</a>
+                            <a href="marcas/coleco.html">Coleco</a>
+                            <a href="marcas/nec.html">NEC</a>
                         </div>
                     </div>
                 </nav>
                 <section class="retro-banner" aria-label="Galería de consolas retro">
                     <div class="slider-wrapper">
-                        <div class="slider-track" id="sliderTrack">
-                            <figure>
-                                <img src="img/banner/atari2600.png" alt="Nintendo NES">
-                                <figcaption>Atari 2600</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/nes.png" alt="Super Nintendo">
-                                <figcaption>Nintendo NES</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/megadrive.png" alt="Mega Drive">
-                                <figcaption>Sega Mega Drive</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/ps1.png" alt="Mega Drive">
-                                <figcaption>Sony Play Station</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/dreamcast.png" alt="Mega Drive">
-                                <figcaption>Sega Dreamcast</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/gamecube.png" alt="Mega Drive">
-                                <figcaption>Nintendo GameCube</figcaption>
-                            </figure>
-
-                            <!-- repito las imágenes para que la animación sea continua -->
-
-                            <figure>
-                                <img src="img/banner/atari2600.png" alt="Nintendo NES">
-                                <figcaption>Atari 2600</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/nes.png" alt="Super Nintendo">
-                                <figcaption>Nintendo NES</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/megadrive.png" alt="Mega Drive">
-                                <figcaption>Sega Mega Drive</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/ps1.png" alt="Mega Drive">
-                                <figcaption>Sony Play Station</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/dreamcast.png" alt="Mega Drive">
-                                <figcaption>Sega Dreamcast</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="img/banner/gamecube.png" alt="Mega Drive">
-                                <figcaption>Nintendo GameCube</figcaption>
-                            </figure>
-                        </div>
+                        <!-- Dejamos este contenedor completamente vacío. El JS inyectará todo aquí dentro -->
+                        <div class="slider-track" id="sliderTrack"></div>
                     </div>
                 </section>
             </main>
@@ -120,7 +75,7 @@
                 </button>
             </div>
             <footer class="footer">
-                <p>2024/2025 Álvaro Chillarón Prats. 1 GS DAM</p>
+                <p><span class="footer-year"></span> © Álvaro Chillarón Prats</p>
             </footer>
         </div>
         <script src="JavaScript/items_javascript.js"></script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bienvenido a Retro Haven, tu lugar para revivir la nostalgia de los videojuegos retro.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+
+        <title>Retro Haven - SNK</title><!--Todo el texto (salvo ciertas partes que he escrito yo mismo), datos e imágenes están extraidos de Wikipedia.org-->
+    </head>
+    <body>
+        <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/SNK"><h3>SNK</h3></a></div>
+        <p>SNK Corporation es una empresa japonesa dedicada al desarrollo y publicación de videojuegos, famosa por sus arcades y consolas de la época dorada de los juegos de lucha y acción, especialmente con la marca Neo Geo.</p>
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
+                <div id="reloj"></div>
+            </header>
+            <main>
+                <div class="grid-container">
+                    <!-- Neo Geo AES -->
+                    <button class="button" onclick="abrirModal('modalNeoGeoAES')">
+                        <img src="../../img/logotipos/modelos/neogeo_logo.png" alt="Logo SNK">
+                    </button>
+                    <div id="modalNeoGeoAES" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalNeoGeoAES')">&times;</span>
+                            <h3>Neo Geo AES</h3>
+                            <p>
+                                Neo Geo Advanced Entertainment System, más conocida como Neo Geo AES, fue la versión doméstica del sistema arcade de SNK. Fue lanzada en 1994 y se caracterizó por su gran calidad gráfica, su enorme nivel de detalle y la gran fidelidad a los juegos arcade.
+                                <br><br>Más de 1.000.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/neogeo.png" alt="Neo Geo AES">
+                        </div>
+                    </div>
+
+                    <!-- Neo Geo CD -->
+                    <button class="button" onclick="abrirModal('modalNeoGeoCD')">
+                        <img src="../../img/logotipos/modelos/neogeocd_logo.png" alt="Neo Geo CD">
+                    </button>
+                    <div id="modalNeoGeoCD" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalNeoGeoCD')">&times;</span>
+                            <h3>Neo Geo CD</h3>
+                            <p>
+                                La Neo Geo CD fue una variante del sistema Neo Geo basada en disco compacto, lanzada en 1994. Ofrecía un formato más económico y accesible para el hogar, manteniendo la excelente calidad jugable y la biblioteca de títulos de SNK.
+                                <br><br>Más de 600.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/neogeocd.png" alt="Neo Geo CD">
+                        </div>
+                    </div>
+
+                    <!-- Neo Geo Pocket 
+                    <button class="button" onclick="abrirModal('modalNeoGeoPocket')">
+                        <img src="../../img/logotipos/snk.png" alt="Neo Geo Pocket">
+                    </button>
+                    <div id="modalNeoGeoPocket" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalNeoGeoPocket')">&times;</span>
+                            <h3>Neo Geo Pocket</h3>
+                            <p>
+                                La Neo Geo Pocket fue la primera portátil de SNK, lanzada en 1998. Aunque de vida breve, destacó por su calidad gráfica y su enfoque en juegos de portátil de la marca, especialmente en la línea de luchas y aventuras.
+                                <br><br>Más de 1.500.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/neogeo.png" alt="Neo Geo Pocket">
+                        </div>
+                    </div> -->
+
+                    <!-- Neo Geo Mini
+                    <button class="button" onclick="abrirModal('modalNeoGeoMini')">
+                        <img src="../../img/logotipos/snk.png" alt="Neo Geo Mini">
+                    </button>
+                    <div id="modalNeoGeoMini" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalNeoGeoMini')">&times;</span>
+                            <h3>Neo Geo Mini</h3>
+                            <p>
+                                La Neo Geo Mini fue una consola dedicada creada por SNK para rendir homenaje a la historia de la marca. Con una selección de juegos clásicos preinstalados, recuperó la nostalgia de la era del arcade para un público moderno.
+                                <br><br>Más de 300.000 unidades vendidas.
+                            </p>
+                            <img src="../../img/consolas/neogeo.png" alt="Neo Geo Mini">
+                        </div>
+                    </div> -->
+                </div>
+                <nav>
+                    <h3>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h3>
+                </nav>
+            </main>
+        </div>
+            <div id="reproductor_musica">
+                <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+                </audio>
+                <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+                </button>
+                <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+                </button>
+            </div>
+        <footer class="footer"></footer>
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>
+
+<!--Todo el texto e imágenes están extraidas de Wikipedia.org-->

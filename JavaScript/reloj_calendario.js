@@ -1,6 +1,12 @@
 //RELOJ Y CALENDARIO
 
 function Reloj() {
+    const reloj = document.getElementById("reloj");
+
+    if (!reloj) {
+        return;
+    }
+
     //variable para obtener distintos valores en formato de fecha y hora
       const ahora = new Date();
   
@@ -17,7 +23,7 @@ function Reloj() {
     //formato de la fecha completa
       const fechaYHora = dia + "/" + mes + "/" + año + " | " + hora + ":" + minuto + ":" + segundo;
     
-      document.getElementById("reloj").textContent = fechaYHora;
+      reloj.textContent = fechaYHora;
   }
   setInterval(Reloj, 1000); //así se actualiza cada segundo
   Reloj(); //lo añado una vez más para que salga directamente al cargar la página

@@ -53,11 +53,30 @@ body {
   opacity: 15%; /* hace visible el gif y se produce el efecto de tele vieja*/
 }
 
+#wrapper {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer {
+  width: 100%;
+  max-width: 760px;
+  margin: 1.5rem auto 0;
   font-size: 100%;
   text-align: center;
   object-position: center;
   display: block;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -65,6 +84,9 @@ h1 {
   font-weight: 1000;
   font-size: 200%;
   color: var(--letra_titulo);
+  text-align: center;
+  width: 420px;
+  margin: 0 auto 1rem;
 }
 
 h2 {
@@ -94,10 +116,14 @@ p {
 
 nav {
   display: flex;
-  box-sizing: border-box;
-  margin: 3%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 760px;
+  margin: 3% auto;
   gap: 48px;
-  
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -127,13 +153,14 @@ a:hover:not(.buy, .buy-cta, .learn) { /* para que las letras tengan un brillo al
 }
 
 .grid-container {
-  text-align: left;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 100%;
   max-width: 780px;
-  margin-top: 10px;
+  margin: 10px auto 0;
+  justify-items: center;
 }
 
 .boton1 {
@@ -141,17 +168,14 @@ a:hover:not(.buy, .buy-cta, .learn) { /* para que las letras tengan un brillo al
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
   gap: 20px; /* separación uniforme */
 }
 
 .boton1 img {
   border-radius: 12px; /* bordes redondeados */
   height: 59px;
-}
-
-input[type="checkbox"] {
-  display: none;
 }
 
 .consolita {
@@ -176,30 +200,17 @@ input[type="checkbox"] {
   transition: 0.5s;
 }
 
+.grid-container .boton1 .button {
+  width: auto !important;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button:hover {
   transform: scale(1.05); /* Pequeño efecto de zoom */
   transition: 0.5s;
-}
-
-/*BORRAR DESPUÉS DE APLICAR LA MODAL*/
-
-.content {
-  display: none;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: left;
-  border-radius: 10px;
-}
-
-.content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Mostrar contenido cuando el checkbox está activado */
-input[type="checkbox"]:checked + .button + .content {
-  display: block;
 }
 
 .consolas {
@@ -230,10 +241,15 @@ margin-top: 5%;
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 100%;
+  max-width: 760px;
   margin: 2rem auto;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+.video-principal {
+  width: 100%;
+  max-width: 720px;
 }
 
 .video-principal video {
@@ -516,12 +532,16 @@ margin-top: 5%;
 /* estilos para el banner */
 
 .retro-banner {
-  text-align: center;
+  width: 100%;
+  max-width: 70%;
+  margin: 2rem auto 0;
+  text-align: left;
   background-color: #1a1a1a;
   color: white;
   padding: 1rem 1rem;
   border-radius: 10px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .retro-banner h2 {
@@ -530,18 +550,22 @@ margin-top: 5%;
 }
 
 .slider-wrapper {
-  width: 660px; /* 3 imágenes de 220px ancho */
+  width: calc(100% - 2rem);
+  max-width: 100%;
+  height: calc(100% - 2rem); /* altura fija */
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
   border: 2px solid white;
   position: relative;
   height: 140px; /* altura fija */
+  box-sizing: border-box;
 }
 
 .slider-track {
   display: flex;
-  width: calc(220px * 12); /* 12 imágenes (6 + 6 repetidas) */
+  width: max-content;
+  min-width: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -556,7 +580,7 @@ margin-top: 5%;
 }
 
 .slider-track img {
-  width: 200px;
+  width: 190px;
   border-radius: 10px;
   margin: 0 auto;
   display: block;
@@ -673,7 +697,6 @@ margin-top: 5%;
     color: #ffd700;
     font-size: 1.5em;
     text-shadow: 0 0 5px #ff0000;
-    margin-left: 17%;
     text-align: center;
 }
 
