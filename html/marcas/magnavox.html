@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descubre la historia de Magnavox y sus videoconsolas pioneras en Retro Haven.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+
+        <title>Retro Haven - Magnavox</title>
+    </head>
+    <body>
+        <div class="linkExterno">
+            <a href="https://es.wikipedia.org/wiki/Magnavox_Odyssey">
+                <h3>MAGNAVOX</h3>
+            </a>
+        </div>
+
+        <p>
+            Magnavox es una marca estadounidense de electrónica de consumo
+            que ocupa un lugar fundamental en la historia de los videojuegos.
+            En 1972 comercializó la Magnavox Odyssey, considerada la primera
+            videoconsola doméstica comercial. Posteriormente lanzó otros
+            sistemas de la familia Odyssey y, en 1978, la Odyssey²,
+            una consola programable que utilizaba cartuchos intercambiables.
+        </p>
+
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion">
+                    <span class="texto_hover">Ubicación de RETRO HAVEN.</span>
+                </a>
+                <div id="reloj"></div>
+            </header>
+
+            <main>
+                <div class="grid-container">
+
+                    <!-- Magnavox Odyssey -->
+                    <button class="button" onclick="abrirModal('modalMagnavoxOdyssey')">
+                        <img src="../../img/logotipos/modelos/logo_odyssey.png"
+                             alt="Logo Magnavox Odyssey">
+                    </button>
+
+                    <div id="modalMagnavoxOdyssey" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar"
+                                  onclick="cerrarModal('modalMagnavoxOdyssey')">&times;</span>
+
+                            <h3>Magnavox Odyssey</h3>
+
+                            <p>
+                                La Magnavox Odyssey fue una videoconsola doméstica
+                                desarrollada por Ralph Baer y comercializada por
+                                Magnavox en septiembre de 1972. Está considerada
+                                la primera videoconsola doméstica comercial de la
+                                historia y supuso uno de los primeros pasos en la
+                                llegada de los videojuegos a los hogares.
+
+                                <br><br>
+                                La consola no utilizaba cartuchos de videojuegos
+                                ni generaba sonido. Sus juegos empleaban circuitos
+                                internos y tarjetas de juego que configuraban
+                                distintas experiencias. La imagen se componía de
+                                elementos muy sencillos y algunos juegos incluían
+                                láminas transparentes que se colocaban sobre la
+                                pantalla del televisor.
+
+                                <br><br>
+                                Vendió aproximadamente 350.000 unidades.
+                            </p>
+
+                            <img src="../../img/consolas/odyssey.png"
+                                 alt="Videoconsola Magnavox Odyssey">
+                        </div>
+                    </div>
+
+                    <!-- Magnavox Odyssey² -->
+                    <button class="button" onclick="abrirModal('modalMagnavoxOdyssey2')">
+                        <img src="../../img/logotipos/modelos/logo_odyssey2.png"
+                             alt="Logo Magnavox Odyssey 2">
+                    </button>
+
+                    <div id="modalMagnavoxOdyssey2" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar"
+                                  onclick="cerrarModal('modalMagnavoxOdyssey2')">&times;</span>
+
+                            <h3>Magnavox Odyssey²</h3>
+
+                            <p>
+                                La Magnavox Odyssey² fue una videoconsola de
+                                segunda generación lanzada en Estados Unidos
+                                en septiembre de 1978. Su principal diferencia
+                                respecto a la Odyssey original era que permitía
+                                utilizar cartuchos intercambiables, por lo que
+                                cada juego podía ofrecer una experiencia distinta.
+
+                                <br><br>
+                                Una de sus características más llamativas era
+                                su teclado alfanumérico de membrana integrado,
+                                utilizado para seleccionar opciones y en algunos
+                                juegos educativos. También disponía de mandos
+                                con joystick y un botón de acción.
+
+                                <br><br>
+                                En Europa se comercializó principalmente como
+                                Philips Videopac G7000. También tuvo variantes
+                                regionales en otros mercados.
+
+                                <br><br>
+                                Vendió aproximadamente 2.000.000 de unidades.
+                            </p>
+
+                            <img src="../../img/consolas/odyssey2.png"
+                                 alt="Videoconsola Magnavox Odyssey 2">
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav>
+                    <h4>
+                        Haz clic
+                        <a href="../consolas.html">
+                            <span style="color: red;">aquí</span>
+                        </a>
+                        para volver a CONSOLAS.
+                    </h4>
+                </nav>
+            </main>
+        </div>
+
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+
+            <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+            </button>
+
+            <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+            </button>
+        </div>
+
+        <footer class="footer"></footer>
+
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>

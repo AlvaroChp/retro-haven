@@ -2,177 +2,435 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Bienvenido a Retro Haven, tu lugar para revivir la nostalgia de los videojuegos retro.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Descubre la historia de las consolas de Nintendo en Retro Haven.">
         <link rel="stylesheet" href="../../css/styles.css">
         <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
-
-        <title>Retro Haven - Nintendo</title><!--Todo el texto (salvo ciertas partes que he escrito yo mismo), datos e imágenes están extraidos de Wikipedia.org-->
+        <title>Retro Haven - Nintendo</title>
     </head>
     <body>
-        <div class="linkExterno"><a href="https://es.wikipedia.org/wiki/Nintendo"><h3>NINTENDO</h3></a></div>
-        <p>Nintendo Company, Ltd. (任天堂株式会社 Nintendō Kabushiki-gaisha) es una empresa de entretenimiento dedicada a la investigación, desarrollo y distribución de software y hardware de videojuegos y juegos de cartas, con sede en Kioto, Japón.</p>
+        <div class="linkExterno">
+            <a href="https://es.wikipedia.org/wiki/Nintendo">
+                <h3>NINTENDO</h3>
+            </a>
+        </div>
+
+        <p>
+            Nintendo Company, Ltd. (任天堂株式会社, Nintendō Kabushiki-gaisha)
+            es una empresa japonesa de entretenimiento con sede en Kioto.
+            Fundada en 1889 como fabricante de naipes, se convirtió en una de
+            las compañías más importantes de la industria de los videojuegos,
+            con consolas y sagas como Super Mario, The Legend of Zelda y Metroid.
+        </p>
+
         <div id="wrapper">
             <header>
-                <a href="../../html/api_ubicacion.html" class="boton_ubicacion"><span class="texto_hover">Ubicación de RETRO HAVEN.</span></a>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion">
+                    <span class="texto_hover">Ubicación de RETRO HAVEN.</span>
+                </a>
                 <div id="reloj"></div>
             </header>
+
             <main>
                 <div class="grid-container">
-                    <!-- NES -->
-                    <button class="button" onclick="abrirModal('modalNES')">
-                        <img src="../../img/logotipos/modelos/nes_logo.png" alt="Logo NES">
+
+                    <!-- Famicom: Japón, 1983 -->
+                    <button class="button" onclick="abrirModal('modalFamicom')">
+                        <img src="../../img/logotipos/modelos/logo_famicom.png" alt="Logo Family Computer">
                     </button>
+
+                    <div id="modalFamicom" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalFamicom')">&times;</span>
+                            <h3>Family Computer (Famicom)</h3>
+                            <p>
+                                La Family Computer, conocida como Famicom o
+                                ファミコン, fue lanzada en Japón el 15 de julio
+                                de 1983. Es la versión japonesa de la familia de
+                                consolas de 8 bits que posteriormente se
+                                comercializó internacionalmente como NES.<br><br>
+
+                                Su diseño original, de color blanco y rojo,
+                                incorporaba dos mandos conectados a la consola.
+                                Utilizaba cartuchos intercambiables y contribuyó
+                                a popularizar los videojuegos domésticos en Japón.
+                                Recibió títulos como Super Mario Bros., The Legend
+                                of Zelda y Metroid.<br><br>
+
+                                Ventas en Japón: aproximadamente 19,35 millones
+                                de unidades.
+                            </p>
+                            <img src="../../img/consolas/famicom.png" alt="Nintendo Family Computer japonesa">
+                        </div>
+                    </div>
+
+                    <!-- NES: Norteamérica, 1985; Europa, 1986 -->
+                    <button class="button" onclick="abrirModal('modalNES')">
+                        <img src="../../img/logotipos/modelos/nes_logo.png" alt="Logo Nintendo Entertainment System">
+                    </button>
+
                     <div id="modalNES" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalNES')">&times;</span>
-                            <h3>NES</h3>
+                            <h3>Nintendo Entertainment System (NES)</h3>
                             <p>
-                                Nintendo Entertainment System (también conocida como Nintendo NES o simplemente NES), llamada en Japón como Family Computer (ファミリーコンピュータ?), abreviado comúnmente como Famicom (ファミコン), es una videoconsola descontinuada de 8 bits perteneciente a la tercera generación en la industria de los videojuegos, la primera consola de sobremesa de Nintendo en emplear cartuchos. Fue lanzada por Nintendo en Norteamérica, Europa y Australia entre 1985 y 1987.
-                                <br><br>18.000.000 unidades vendidas.
+                                La Nintendo Entertainment System, conocida
+                                como NES, es la versión occidental de la familia
+                                de consolas de 8 bits iniciada por la Famicom.
+                                Se lanzó en Norteamérica en 1985 y llegó a Europa
+                                en 1986.<br><br>
+
+                                A diferencia del diseño japonés, la NES original
+                                norteamericana utilizaba una carcasa horizontal
+                                de color gris y un sistema de inserción frontal
+                                de cartuchos. Su catálogo ayudó a consolidar
+                                franquicias como Super Mario Bros., The Legend
+                                of Zelda, Metroid y Mega Man.<br><br>
+
+                                La Famicom y la NES pertenecen a la misma familia,
+                                pero sus cartuchos y diseños regionales no son
+                                idénticos. Las cifras de ventas publicadas para
+                                la NES suelen rondar los 61,9 millones de unidades
+                                en todo el mundo.
                             </p>
-                            <img src="../../img/consolas/nes.png" alt="NES">
+                            <img src="../../img/consolas/nes.png" alt="Nintendo Entertainment System occidental">
                         </div>
                     </div>
 
-                    <!-- SNES -->
-                    <button class="button" onclick="abrirModal('modalSNES')">
-                        <img src="../../img/logotipos/modelos/snes_logo.png" alt="Logo SNES">
+                    <!-- Super Famicom: Japón, 1990 -->
+                    <button class="button" onclick="abrirModal('modalSuperFamicom')">
+                        <img src="../../img/logotipos/modelos/logo_superfamicom.png" alt="Logo Super Famicom">
                     </button>
+
+                    <div id="modalSuperFamicom" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalSuperFamicom')">&times;</span>
+                            <h3>Super Famicom</h3>
+                            <p>
+                                La Super Famicom (スーパーファミコン) es la versión
+                                japonesa de la consola de 16 bits que Nintendo
+                                comercializó en otros territorios como Super
+                                Nintendo Entertainment System. Salió en Japón
+                                el 21 de noviembre de 1990.<br><br>
+
+                                Su diseño japonés presenta una carcasa redondeada
+                                de color blanco y gris y mandos con botones de
+                                distintos colores. Supuso un salto importante
+                                respecto a la Famicom gracias a sus gráficos,
+                                sonido y posibilidades técnicas. Entre sus juegos
+                                más conocidos están Super Mario World, The Legend
+                                of Zelda: A Link to the Past y Super Metroid.<br><br>
+
+                                La Super Famicom y las versiones occidentales
+                                pertenecen a la misma familia de 16 bits, aunque
+                                cambian la carcasa, los cartuchos y algunos
+                                detalles regionales.<br><br>
+
+                                Ventas en Japón: aproximadamente 17,17 millones
+                                de unidades.
+                            </p>
+                            <img src="../../img/consolas/superfamicom.png" alt="Nintendo Super Famicom japonesa">
+                        </div>
+                    </div>
+
+                    <!-- SNES: Norteamérica, 1991 -->
+                    <button class="button" onclick="abrirModal('modalSNES')">
+                        <img src="../../img/logotipos/modelos/snes_logo.png" alt="Logo Super Nintendo Entertainment System">
+                    </button>
+
                     <div id="modalSNES" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalSNES')">&times;</span>
-                            <h3>Super Nintendo</h3>
+                            <h3>Super Nintendo Entertainment System (SNES)</h3>
                             <p>
-                                La Super Nintendo Entertainment System, conocida popularmente como la Super Nintendo, también llamada la Super Famicom (スーパーファミコン) en Japón, nombrada oficialmente de forma abreviada como la Super NES o SNES en América y Super Nintendo en Europa.
-                                Fue descontinuada en el año 1999 (2003 en Japón) y años más tarde, fue relanzada virtualmente a través de la Consola Virtual en la Wii en 2006, Wii U en 2013, Nintendo 3DS (solo la versión New) en 2016 y Nintendo Switch en 2019 a través del servicio en línea Nintendo Switch Online.
-                                <br><br>49.100.000 unidades vendidas.
+                                La Super Nintendo Entertainment System, conocida
+                                como SNES en Norteamérica, es la versión occidental
+                                de la consola de 16 bits de Nintendo. Se lanzó en
+                                Estados Unidos el 23 de agosto de 1991 y compitió
+                                principalmente con la Sega Genesis, conocida en
+                                Europa como Mega Drive.<br><br>
+
+                                El modelo norteamericano tiene una carcasa
+                                de líneas angulosas y botones de mando de
+                                distintos colores. Su hardware permitió juegos
+                                con escenarios detallados, efectos gráficos
+                                avanzados y una banda sonora más elaborada que
+                                la generación anterior. Entre sus títulos más
+                                destacados están Super Mario World, Super Metroid,
+                                Donkey Kong Country y The Legend of Zelda:
+                                A Link to the Past.<br><br>
+
+                                La SNES norteamericana es una variante regional
+                                de la misma familia que la Super Famicom japonesa
+                                y la Super Nintendo europea. Su diseño y sus
+                                cartuchos presentan diferencias regionales.<br><br>
+
+                                La familia Super Nintendo vendió más de
+                                49 millones de unidades en todo el mundo,
+                                según las cifras históricas más difundidas.
                             </p>
-                            <img src="../../img/consolas/snes.png" alt="SNES">
+                            <img src="../../img/consolas/snes.png" alt="Super Nintendo Entertainment System norteamericana">
                         </div>
                     </div>
 
-                    <!-- N64 -->
-                    <button class="button" onclick="abrirModal('modalN64')">
-                        <img src="../../img/logotipos/modelos/n64_logo3.png" alt="Logo N64">
+                    <!-- Super Nintendo europea: Europa, 1992 -->
+                    <button class="button" onclick="abrirModal('modalSuperNintendoEuropa')">
+                        <img src="../../img/logotipos/modelos/supernintendo_logo.png" alt="Logo Super Nintendo europea">
                     </button>
+
+                    <div id="modalSuperNintendoEuropa" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalSuperNintendoEuropa')">&times;</span>
+                            <h3>Super Nintendo europea (PAL)</h3>
+                            <p>
+                                La Super Nintendo europea es la versión PAL de
+                                la consola de 16 bits de Nintendo. Llegó a Europa
+                                en junio de 1992, después de los lanzamientos
+                                japonés de 1990 y norteamericano de 1991.<br><br>
+
+                                Su carcasa redondeada, de color gris claro,
+                                se diferencia del diseño más anguloso de la SNES
+                                norteamericana. También utilizaba cartuchos con
+                                una forma distinta a los de la versión de Estados
+                                Unidos. Estas diferencias regionales son
+                                importantes para identificar correctamente
+                                cada modelo físico.<br><br>
+
+                                Aunque en Europa se conoció habitualmente como
+                                Super Nintendo, su nombre oficial completo
+                                también fue Super Nintendo Entertainment System.
+                                No se trata de una consola de otra generación,
+                                sino de la variante europea de la misma familia
+                                de 16 bits que la Super Famicom y la SNES
+                                norteamericana.<br><br>
+
+                                La familia Super Nintendo vendió más de
+                                49 millones de unidades en todo el mundo.
+                                Esta cifra corresponde a la familia completa,
+                                no exclusivamente al modelo europeo.
+                            </p>
+                            <img src="../../img/consolas/supernintendo.png" alt="Super Nintendo europea PAL">
+                        </div>
+                    </div>
+
+                    <!-- Nintendo 64: 1996 -->
+                    <button class="button" onclick="abrirModal('modalN64')">
+                        <img src="../../img/logotipos/modelos/n64_logo3.png" alt="Logo Nintendo 64">
+                    </button>
+
                     <div id="modalN64" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalN64')">&times;</span>
                             <h3>Nintendo 64</h3>
                             <p>
-                                La Nintendo 64 (ニンテンドウ64) es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D. Compitió en el mercado de la quinta generación con Saturn de Sega y PlayStation de Sony; esta última, creada a partir de diseños descartados previamente por Nintendo.
-                                Incorporó en su arquitectura un procesador principal de 64 bits. El soporte de almacenamiento de los juegos era en forma de cartuchos, la mayoría de ellos con memoria interna. El uso de este tipo de almacenamiento le supuso una seria desventaja comercial frente a sus competidores, ya que encarecía los costes de producción lo que aumentaba el precio final y además era de una capacidad de almacenamiento menor al de un CD-ROM.
-                                <br><br>32.930.000 unidades vendidas.
+                                La Nintendo 64 fue lanzada en Japón en junio
+                                de 1996 y posteriormente llegó a otros mercados.
+                                Es una consola de quinta generación que destacó
+                                por sus gráficos tridimensionales y su mando
+                                con palanca analógica.<br><br>
+
+                                A diferencia de PlayStation y Sega Saturn,
+                                continuó utilizando cartuchos como soporte
+                                principal de sus juegos. Esta elección ofrecía
+                                tiempos de carga reducidos, aunque limitaba
+                                el espacio disponible frente al CD-ROM.<br><br>
+
+                                Entre sus juegos más recordados están Super
+                                Mario 64, The Legend of Zelda: Ocarina of Time
+                                y GoldenEye 007.<br><br>
+
+                                Ventas mundiales: aproximadamente 32,93 millones
+                                de unidades.
                             </p>
                             <img src="../../img/consolas/n64.png" alt="Nintendo 64">
                         </div>
                     </div>
 
-                    <!-- GameCube -->
+                    <!-- GameCube: 2001 -->
                     <button class="button" onclick="abrirModal('modalGameCube')">
-                        <img src="../../img/logotipos/modelos/gamecube_logo.png" alt="Logo GameCube">
+                        <img src="../../img/logotipos/modelos/gamecube_logo.png" alt="Logo Nintendo GameCube">
                     </button>
+
                     <div id="modalGameCube" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalGameCube')">&times;</span>
-                            <h3>GameCube</h3>
+                            <h3>Nintendo GameCube</h3>
                             <p>
-                                Nintendo GameCube (ニンテンドーゲームキューブ Nintendō GēmuKyūbu) también llamada simplemente la GameCube y abreviada como GCN en América y NGC en Japón, es la quinta consola descontinuada de sobremesa hecha por Nintendo. Fue la sucesora de la Nintendo 64 y la predecesora de la Wii.
-                                Su principal característica fue su procesador central basado en un IBM PowerPC (tecnología previa utilizada en computadoras personales y portátiles), y su procesador gráfico desarrollado por ATI Technologies. Nintendo, por primera vez, prescindió del cartucho (ROM) como formato de almacenamiento, y adoptó un formato óptico propio, el Nintendo Optical Disc. El nombre «GameCube» se debió a que el sistema tuvo la forma de un cubo. Fue además la primera consola de Nintendo que no contó en su fecha de lanzamiento con un juego de Mario, mascota oficial de la compañía.
-                                <br><br>21.740.000 unidades vendidas.
+                                Nintendo GameCube se lanzó en Japón en septiembre
+                                de 2001 y llegó a otros mercados ese mismo año.
+                                Fue la sucesora de Nintendo 64 y utilizó discos
+                                ópticos de formato propio en lugar de cartuchos.<br><br>
+
+                                Su diseño compacto en forma de cubo y su asa
+                                integrada la diferenciaron de otras consolas.
+                                Contaba con un procesador basado en PowerPC
+                                y gráficos desarrollados por ATI. Su catálogo
+                                incluyó Super Mario Sunshine, Metroid Prime,
+                                Luigi's Mansion y The Legend of Zelda: The
+                                Wind Waker.<br><br>
+
+                                Ventas mundiales: aproximadamente 21,74 millones
+                                de unidades.
                             </p>
-                            <img src="../../img/consolas/gamecube.png" alt="GameCube">
+                            <img src="../../img/consolas/gamecube.png" alt="Nintendo GameCube">
                         </div>
                     </div>
 
-                    <!-- Wii -->
+                    <!-- Wii: 2006 -->
                     <button class="button" onclick="abrirModal('modalWii')">
-                        <img src="../../img/logotipos/modelos/wii_logo.png" alt="Logo Wii">
+                        <img src="../../img/logotipos/modelos/wii_logo.png" alt="Logo Nintendo Wii">
                     </button>
+
                     <div id="modalWii" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalWii')">&times;</span>
                             <h3>Nintendo Wii</h3>
                             <p>
-                                Wii es la sexta consola de sobremesa de Nintendo, lanzada en 2006. Perteneciente a la séptima generación, destacó por su revolucionario mando inalámbrico, el Wiimote, capaz de detectar el movimiento en tres dimensiones. Consiguió romper barreras demográficas y atraer a jugadores casuales gracias a títulos icónicos como Wii Sports, convirtiéndose en uno de los mayores éxitos comerciales de la firma.
-                                <br><br>101.630.000 unidades vendidas.
+                                Wii se lanzó en 2006 y destacó por su mando
+                                inalámbrico Wii Remote, capaz de detectar
+                                movimientos y orientación. Nintendo apostó por
+                                una experiencia accesible para públicos muy
+                                diversos, más allá de los jugadores habituales.<br><br>
+
+                                Juegos como Wii Sports, Mario Kart Wii y
+                                Super Mario Galaxy ayudaron a convertirla
+                                en uno de los mayores éxitos comerciales
+                                de la compañía.<br><br>
+
+                                Ventas mundiales: aproximadamente 101,63 millones
+                                de unidades.
                             </p>
-                            <img src="../../img/consolas/wii.png" alt="Wii">
+                            <img src="../../img/consolas/wii.png" alt="Nintendo Wii">
                         </div>
                     </div>
 
-                    <!-- Wii U -->
+                    <!-- Wii U: 2012 -->
                     <button class="button" onclick="abrirModal('modalWiiU')">
-                        <img src="../../img/logotipos/modelos/wiiu_logo.png" alt="Logo Wii U">
+                        <img src="../../img/logotipos/modelos/wiiu_logo.png" alt="Logo Nintendo Wii U">
                     </button>
+
                     <div id="modalWiiU" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalWiiU')">&times;</span>
                             <h3>Nintendo Wii U</h3>
                             <p>
-                                Wii U es la séptima consola de sobremesa de Nintendo, lanzada a finales de 2012. Fue el primer sistema de la compañía en ofrecer soporte para gráficos en alta definición. Introdujo el Wii U GamePad, un mando con una pantalla táctil integrada que permitía mecánicas de juego asimétricas y la función Off-TV. Tuvo un ciclo de vida corto debido a una recepción comercial discreta.
-                                <br><br>13.560.000 unidades vendidas.
+                                Wii U se lanzó en 2012 y fue la primera consola
+                                de sobremesa de Nintendo compatible con gráficos
+                                de alta definición. Su principal novedad era
+                                el Wii U GamePad, un mando con pantalla táctil
+                                que permitía mostrar información adicional
+                                o continuar algunas partidas sin utilizar
+                                el televisor.<br><br>
+
+                                Pese a ideas interesantes y juegos destacados,
+                                como Mario Kart 8 y Super Mario 3D World,
+                                tuvo unas ventas muy inferiores a las de Wii.<br><br>
+
+                                Ventas mundiales: aproximadamente 13,56 millones
+                                de unidades.
                             </p>
-                            <img src="../../img/consolas/wiiu.png" alt="Wii U">
+                            <img src="../../img/consolas/wiiu.png" alt="Nintendo Wii U">
                         </div>
                     </div>
 
-                    <!-- Switch -->
+                    <!-- Nintendo Switch: 2017 -->
                     <button class="button" onclick="abrirModal('modalSwitch')">
                         <img src="../../img/logotipos/modelos/switch_logo.png" alt="Logo Nintendo Switch">
                     </button>
+
                     <div id="modalSwitch" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalSwitch')">&times;</span>
                             <h3>Nintendo Switch</h3>
                             <p>
-                                Nintendo Switch es una consola de octava generación lanzada a nivel mundial en marzo de 2017. Destaca por su naturaleza híbrida, pudiendo utilizarse como consola de sobremesa conectada a un televisor mediante un dock, o de forma portátil gracias a su pantalla multitáctil y mandos desacoplables Joy-Con. Su versatilidad y su fuerte catálogo de exclusivas la han encumbrado a los primeros puestos históricos de la industria.
-                                <br><br>143.000.000 unidades vendidas.
+                                Nintendo Switch se lanzó mundialmente el
+                                3 de marzo de 2017. Su diseño híbrido permite
+                                jugar tanto en un televisor, mediante su base,
+                                como en modo portátil. Sus mandos Joy-Con
+                                desmontables permiten también jugar en modo
+                                sobremesa sin accesorios adicionales.<br><br>
+
+                                Su versatilidad y su amplio catálogo de juegos,
+                                entre ellos The Legend of Zelda: Breath of the
+                                Wild, Super Mario Odyssey y Animal Crossing:
+                                New Horizons, la convirtieron en una de las
+                                consolas de mayor éxito de Nintendo.<br><br>
+
+                                Ventas mundiales: más de 150 millones de unidades
+                                a lo largo de su ciclo comercial, según la fecha
+                                de actualización de las cifras oficiales.
                             </p>
                             <img src="../../img/consolas/switch.png" alt="Nintendo Switch">
                         </div>
                     </div>
 
-                    <!-- Switch 2 -->
+                    <!-- Nintendo Switch 2: 2025 -->
                     <button class="button" onclick="abrirModal('modalSwitch2')">
-                        <img src="../../img/logotipos/modelos/switch2_logo.png" alt="Logo Switch 2">
+                        <img src="../../img/logotipos/modelos/switch2_logo.png" alt="Logo Nintendo Switch 2">
                     </button>
+
                     <div id="modalSwitch2" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalSwitch2')">&times;</span>
                             <h3>Nintendo Switch 2</h3>
                             <p>
-                                La esperada sucesora de la Nintendo Switch, diseñada para evolucionar el concepto híbrido con mayor potencia de procesamiento, tecnologías gráficas modernas y total retrocompatibilidad con el catálogo de la Switch original.
-                                <br><br>Próximamente disponible.
+                                Nintendo Switch 2 es la sucesora de Nintendo
+                                Switch y se lanzó el 5 de junio de 2025.
+                                Conserva el concepto híbrido de su predecesora,
+                                con mejoras en potencia, pantalla, mandos
+                                y opciones de juego.<br><br>
+
+                                Incorpora una pantalla LCD de mayor tamaño,
+                                mandos Joy-Con 2 con conexión magnética y
+                                funciones adicionales. También permite jugar
+                                a títulos compatibles de Nintendo Switch,
+                                aunque la compatibilidad puede variar según
+                                el juego.<br><br>
+
+                                Entre sus juegos se encuentra Mario Kart World,
+                                desarrollado para aprovechar las posibilidades
+                                de la nueva consola.
                             </p>
-                            <img src="../../img/consolas/switch2.png" alt="Switch 2">
+                            <img src="../../img/consolas/switch2.png" alt="Nintendo Switch 2">
                         </div>
                     </div>
+
                 </div>
+
                 <nav>
-                    <h3>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h3>
+                    <h3>
+                        Haz clic
+                        <a href="../consolas.html">
+                            <span style="color: red;">aquí</span>
+                        </a>
+                        para volver a CONSOLAS.
+                    </h3>
                 </nav>
             </main>
         </div>
-            <div id="reproductor_musica">
-                <audio id="audio" loop>
+
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
                 <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
                 Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
-                </audio>
-                <button type="button" class="musiquita play" id="btnPlay">
+            </audio>
+
+            <button type="button" class="musiquita play" id="btnPlay">
                 <img src="../../img/musica/play.png" alt="Play">
-                </button>
-                <button type="button" class="musiquita pause" id="btnPause">
+            </button>
+
+            <button type="button" class="musiquita pause" id="btnPause">
                 <img src="../../img/musica/pause.png" alt="Pause">
-                </button>
-            </div>
-        <footer class="footer"></footer>
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p><span id="anio-actual"></span> © Álvaro Chillarón Prats</p>
+        </footer>
+
         <script src="../../JavaScript/items_javascript.js"></script>
         <script src="../../JavaScript/reloj_calendario.js"></script>
         <script src="../../JavaScript/reproductor_musica.js"></script>
         <script src="../../JavaScript/modal.js"></script>
     </body>
 </html>
-
-<!--Todo el texto e imágenes están extraidas de Wikipedia.org-->

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Descubre la historia de Mattel y sus videoconsolas Intellivision y HyperScan en Retro Haven.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+        <title>Retro Haven - Mattel</title>
+    </head>
+    <body>
+        <div class="linkExterno">
+            <a href="https://es.wikipedia.org/wiki/Mattel">
+                <h3>MATTEL</h3>
+            </a>
+        </div>
+
+        <p>
+            Mattel es una empresa estadounidense de juguetes que también tuvo
+            un papel destacado en la historia de los videojuegos. A través de
+            su división Mattel Electronics lanzó la Intellivision a finales de
+            los años setenta y, décadas después, la HyperScan, una consola que
+            combinaba videojuegos tradicionales con tarjetas coleccionables
+            dotadas de tecnología RFID.
+        </p>
+
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion">
+                    <span class="texto_hover">Ubicación de RETRO HAVEN.</span>
+                </a>
+                <div id="reloj"></div>
+            </header>
+
+            <main>
+                <div class="grid-container">
+
+                    <!-- Mattel Intellivision -->
+                    <button class="button" onclick="abrirModal('modalIntellivision')">
+                        <img src="../../img/logotipos/modelos/logo_intellivision.png" alt="Logo Intellivision">
+                    </button>
+
+                    <div id="modalIntellivision" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalIntellivision')">&times;</span>
+
+                            <h3>Mattel Intellivision</h3>
+
+                            <p>
+                                La Intellivision fue una videoconsola doméstica
+                                desarrollada por Mattel Electronics y comercializada
+                                inicialmente en Estados Unidos a partir de 1979,
+                                antes de ampliar su distribución durante 1980.
+                                Su nombre procede de la expresión inglesa
+                                "Intelligent Television". Compitió principalmente
+                                con la Atari 2600 y destacó por sus juegos deportivos
+                                y estratégicos, así como por sus gráficos.<br><br>
+
+                                Las estimaciones de ventas varían según la fuente,
+                                y suelen situarse entre 3 y 5 millones de unidades.
+                            </p>
+
+                            <img src="../../img/consolas/intellivision.png" alt="Consola Mattel Intellivision">
+                        </div>
+                    </div>
+
+                    <!-- Mattel HyperScan -->
+                    <button class="button" onclick="abrirModal('modalHyperScan')">
+                        <img src="../../img/logotipos/modelos/logo_hyperscan.png" alt="Logo Mattel HyperScan">
+                    </button>
+
+                    <div id="modalHyperScan" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalHyperScan')">&times;</span>
+
+                            <h3>Mattel HyperScan</h3>
+
+                            <p>
+                                La HyperScan fue una videoconsola desarrollada
+                                por Mattel y lanzada en Norteamérica en 2006.
+                                Su propuesta combinaba videojuegos en CD con
+                                tarjetas coleccionables que utilizaban tecnología
+                                RFID (identificación por radiofrecuencia). La
+                                consola podía leer estas tarjetas para desbloquear
+                                personajes, habilidades y otras funciones dentro
+                                de los juegos.<br><br>
+
+                                La HyperScan tuvo una vida comercial muy corta:
+                                Mattel dejó de comercializarla en 2007 debido
+                                a sus malos resultados. A pesar de su fracaso
+                                comercial, resulta un ejemplo curioso de los
+                                intentos de combinar objetos físicos y videojuegos.
+                            </p>
+
+                            <img src="../../img/consolas/hyperscan.png" alt="Videoconsola Mattel HyperScan">
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav>
+                    <h2>
+                        Haz clic
+                        <a href="../consolas.html">
+                            <span style="color: red;">aquí</span>
+                        </a>
+                        para volver a CONSOLAS.
+                    </h2>
+                </nav>
+            </main>
+        </div>
+
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+            </audio>
+
+            <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+            </button>
+
+            <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p><span id="anio-actual"></span> © Álvaro Chillarón Prats</p>
+        </footer>
+
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>

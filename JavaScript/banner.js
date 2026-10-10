@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
   <figure><img src="${asset('img/consolas/megadrive.png')}" alt="Sega Mega Drive"><figcaption>Sega Mega Drive</figcaption></figure>
   <figure><img src="${asset('img/consolas/turbografx16.png')}" alt="TurboGrafx-16"><figcaption>TurboGrafx-16</figcaption></figure>
   <figure><img src="${asset('img/consolas/neogeo.png')}" alt="Neo Geo AES"><figcaption>Neo Geo AES</figcaption></figure>
-  <figure><img src="${asset('img/consolas/sfamicom.png')}" alt="Nintendo Super Famicom"><figcaption>Nintendo Super Famicom</figcaption></figure>
+  <figure><img src="${asset('img/consolas/superfamicom.png')}" alt="Nintendo Super Famicom"><figcaption>Nintendo Super Famicom</figcaption></figure>
   <figure><img src="${asset('img/consolas/snes.png')}" alt="Nintendo SNES"><figcaption>Nintendo SNES</figcaption></figure>
   <figure><img src="${asset('img/consolas/jaguar.png')}" alt="Atari Jaguar"><figcaption>Atari Jaguar</figcaption></figure>
   <figure><img src="${asset('img/consolas/saturn.png')}" alt="Sega Saturn"><figcaption>Sega Saturn</figcaption></figure>
