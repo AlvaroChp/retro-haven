@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Descubre la historia de Coleco y su mítica videoconsola ColecoVision en Retro Haven.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+        <title>Retro Haven - Coleco</title>
+    </head>
+    <body>
+        <div class="linkExterno">
+            <a href="https://wikipedia.org">
+                <h3>COLECO</h3>
+            </a>
+        </div>
+
+        <p>
+            Coleco (Connecticut Leather Company) fue una empresa estadounidense que, 
+            tras pasar por el negocio de la piel y las piscinas, se convirtió en una 
+            figura clave de los videojuegos en los años 80 gracias a su exitosa línea 
+            de consolas dedicadas Telstar y, sobre todo, a la potente ColecoVision.
+        </p>
+
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion">
+                    <span class="texto_hover">Ubicación de RETRO HAVEN.</span>
+                </a>
+                <div id="reloj"></div>
+            </header>
+
+            <main>
+                <div class="grid-container">
+
+                    <!-- ColecoVision -->
+                    <button class="button" onclick="abrirModal('modalColecoVision')">
+                        <img src="../../img/logotipos/modelos/logo_colecovision.png" alt="Logo ColecoVision">
+                    </button>
+
+                    <div id="modalColecoVision" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalColecoVision')">&times;</span>
+
+                            <h3>ColecoVision</h3>
+
+                            <p>
+                                La ColecoVision fue una videoconsola doméstica de segunda generación
+                                lanzada en 1982 por la empresa Coleco. Compitió directamente contra
+                                la Atari 5200 y la Intellivision, destacando por ofrecer una experiencia
+                                visual y jugable muy cercana a las máquinas arcade de la época.<br><br>
+
+                                Su éxito inicial estuvo fuertemente impulsado por incluir el juego
+                                Donkey Kong de Nintendo como título incluido en la caja.
+                                Las ventas superaron el millón de unidades a principios de 1983,
+                                antes de la Crisis del videojuego de 1983 y fue descatalogada
+                                en la primavera de 1984.<br><br>
+                                Incluso con esas dificultades, vendió más de 6 millones de unidades.
+                            </p>
+
+                            <img src="../../img/consolas/colecovision.png" alt="Consola ColecoVision">
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav>
+                    <h2>
+                        Haz clic
+                        <a href="../consolas.html">
+                            <span style="color: red;">aquí</span>
+                        </a>
+                        para volver a CONSOLAS.
+                    </h2>
+                </nav>
+            </main>
+        </div>
+
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+            </audio>
+
+            <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+            </button>
+
+            <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p><span id="anio-actual"></span> © Álvaro Chillarón Prats</p>
+        </footer>
+
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>

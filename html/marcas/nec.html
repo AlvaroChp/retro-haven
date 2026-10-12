@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Descubre la historia de NEC junto a Hudson Soft y sus legendarias consolas PC Engine y TurboGrafx-16 en Retro Haven.">
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link rel="icon" href="../../img/favicon/rh.ico" type="image/x-icon">
+        <title>Retro Haven - NEC</title>
+    </head>
+    <body>
+        <div class="linkExterno">
+            <a href="https://es.wikipedia.org/wiki/PC_Engine">
+                <h3>NEC</h3>
+            </a>
+        </div>
+
+        <p>
+            NEC (Nippon Electric Company) entró con fuerza en el mercado de los videojuegos 
+            al aliarse con Hudson Soft. Juntos crearon un ecosistema innovador que rivalizó 
+            directamente con gigantes como Nintendo y SEGA, rompiendo moldes gracias a su potente 
+            apartado gráfico y convirtiéndose en pioneros absolutos del uso del formato CD-ROM.
+        </p>
+
+        <div id="wrapper">
+            <header>
+                <a href="../../html/api_ubicacion.html" class="boton_ubicacion">
+                    <span class="texto_hover">Ubicación de RETRO HAVEN.</span>
+                </a>
+                <div id="reloj"></div>
+            </header>
+
+            <main>
+                <div class="grid-container">
+
+                    <!-- NEC PC Engine -->
+                    <button class="button" onclick="abrirModal('modalPCEngine')">
+                        <img src="../../img/logotipos/modelos/logo_pcengine.png" alt="Logo PC Engine">
+                    </button>
+
+                    <div id="modalPCEngine" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalPCEngine')">&times;</span>
+
+                            <h3>NEC PC Engine</h3>
+
+                            <p>
+                                Lanzada en Japón a finales de 1987, la PC Engine revolucionó el mercado 
+                                nipón por su diseño increíblemente compacto y sus tarjetas de juego en formato 
+                                HuCard (similares a una tarjeta de crédito). Contaba con una CPU de 8 bits 
+                                y una potente GPU dual de 16 bits que le permitía poner cientos de colores en 
+                                pantalla y ofrecer conversiones casi perfectas de los salones recreativos.<br><br>
+
+                                Fue un éxito masivo en Japón, llegando a superar en ventas a la mismísima Famicom 
+                                de Nintendo durante sus primeros años de vida en el mercado.
+                            </p>
+
+                            <img src="../../img/consolas/pcengine.png" alt="Consola NEC PC Engine">
+                        </div>
+                    </div>
+
+                    <!-- NEC TurboGrafx-16 -->
+                    <button class="button" onclick="abrirModal('modalTurboGrafx')">
+                        <img src="../../img/logotipos/modelos/logo_turbografx16.png" alt="Logo TurboGrafx-16">
+                    </button>
+
+                    <div id="modalTurboGrafx" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" onclick="cerrarModal('modalTurboGrafx')">&times;</span>
+
+                            <h3>NEC TurboGrafx-16</h3>
+
+                            <p>
+                                Adaptada para el mercado occidental, la TurboGrafx-16 se lanzó en Norteamérica
+                                en 1989. Para intentar encajar con los gustos americanos, NEC cambió drásticamente
+                                el diseño estilizado japonés por una carcasa gris mucho más grande y robusta. El "-16"
+                                de su nombre se añadió como estrategia comercial para destacar su arquitectura gráfica.<br><br>
+
+                                Aunque compartía el mismo catálogo de juegos que su contraparte oriental, sufrió una dura
+                                competencia frente a la SEGA Genesis y la Super Nintendo, lo que limitó su éxito comercial
+                                en Occidente.
+                            </p>
+
+                            <img src="../../img/consolas/turbografx16.png" alt="Consola NEC TurboGrafx-16">
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav>
+                    <h2>
+                        Haz clic
+                        <a href="../consolas.html">
+                            <span style="color: red;">aquí</span>
+                        </a>
+                        para volver a CONSOLAS.
+                    </h2>
+                </nav>
+            </main>
+        </div>
+
+        <div id="reproductor_musica">
+            <audio id="audio" loop>
+                <source src="../../audio/LosNintendos.mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio, deja de usar Internet Explorer.
+            </audio>
+
+            <button type="button" class="musiquita play" id="btnPlay">
+                <img src="../../img/musica/play.png" alt="Play">
+            </button>
+
+            <button type="button" class="musiquita pause" id="btnPause">
+                <img src="../../img/musica/pause.png" alt="Pause">
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p><span id="anio-actual"></span> © Álvaro Chillarón Prats</p>
+        </footer>
+
+        <script src="../../JavaScript/items_javascript.js"></script>
+        <script src="../../JavaScript/reloj_calendario.js"></script>
+        <script src="../../JavaScript/reproductor_musica.js"></script>
+        <script src="../../JavaScript/modal.js"></script>
+    </body>
+</html>
