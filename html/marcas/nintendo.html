@@ -32,6 +32,7 @@
             </header>
 
             <main>
+                <h2 class="categoria-titulo">Sobremesa</h2>
                 <div class="grid-container">
 
                     <!-- Famicom: Japón, 1983 -->
@@ -334,10 +335,6 @@
                     </div>
 
                     <!-- Nintendo Switch: 2017 -->
-                    <button class="button" onclick="abrirModal('modalSwitch')">
-                        <img src="../../img/logotipos/modelos/logo_switch.png" alt="Logo Nintendo Switch">
-                    </button>
-
                     <div id="modalSwitch" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalSwitch')">&times;</span>
@@ -365,10 +362,6 @@
                     </div>
 
                     <!-- Nintendo Switch 2: 2025 -->
-                    <button class="button" onclick="abrirModal('modalSwitch2')">
-                        <img src="../../img/logotipos/modelos/logo_switch2.png" alt="Logo Nintendo Switch 2">
-                    </button>
-
                     <div id="modalSwitch2" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar" onclick="cerrarModal('modalSwitch2')">&times;</span>
@@ -396,6 +389,30 @@
                     </div>
 
                 </div>
+
+                <h2 class="categoria-titulo">Híbrida</h2>
+                <div class="grid-container">
+                    <button class="button" onclick="abrirModal('modalSwitch')">
+                        <img src="../../img/logotipos/modelos/logo_switch.png" alt="Logo Nintendo Switch">
+                    </button>
+                    <button class="button" onclick="abrirModal('modalSwitch2')">
+                        <img src="../../img/logotipos/modelos/logo_switch2.png" alt="Logo Nintendo Switch 2">
+                    </button>
+                </div>
+
+                <h2 class="categoria-titulo">Portatil</h2>
+                <div class="grid-container">
+                    <button class="button" type="button" onclick="abrirModal('modalGameBoy')"><span class="texto-modelo">Game Boy</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalGameBoyColor')"><span class="texto-modelo">Game Boy Color</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalGameBoyAdvance')"><span class="texto-modelo">Game Boy Advance</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalNintendoDS')"><span class="texto-modelo">Nintendo DS</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalNintendo3DS')"><span class="texto-modelo">Nintendo 3DS</span></button>
+                </div>
+                <div id="modalGameBoy" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalGameBoy')">&times;</span><h3>Game Boy</h3><p>Consola portátil de Nintendo lanzada en 1989. Su diseño resistente, su autonomía y juegos como Tetris la convirtieron en una de las portátiles más influyentes de la historia.</p></div></div>
+                <div id="modalGameBoyColor" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalGameBoyColor')">&times;</span><h3>Game Boy Color</h3><p>Versión a color de Game Boy, lanzada en 1998. Mantuvo la compatibilidad con gran parte del catálogo anterior e incorporó una pantalla con color y mejores capacidades técnicas.</p></div></div>
+                <div id="modalGameBoyAdvance" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalGameBoyAdvance')">&times;</span><h3>Game Boy Advance</h3><p>Portátil de 32 bits lanzada en 2001. Amplió notablemente la potencia de la familia Game Boy y recibió juegos de plataformas, rol y acción de generaciones anteriores y nuevas.</p></div></div>
+                <div id="modalNintendoDS" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalNintendoDS')">&times;</span><h3>Nintendo DS</h3><p>Portátil lanzada en 2004 con dos pantallas, una de ellas táctil. Su control por lápiz, el micrófono y su amplio catálogo la hicieron especialmente popular entre públicos muy diversos.</p></div></div>
+                <div id="modalNintendo3DS" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalNintendo3DS')">&times;</span><h3>Nintendo 3DS</h3><p>Portátil de 2011 que incorporó una pantalla 3D estereoscópica sin gafas. Fue compatible con los juegos de Nintendo DS y contó con títulos como Mario Kart 7 y The Legend of Zelda: A Link Between Worlds.</p></div></div>
 
                 <nav>
                     <h3>

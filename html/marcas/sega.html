@@ -17,6 +17,7 @@
                 <div id="reloj"></div>
             </header>
             <main>
+                <h2 class="categoria-titulo">Sobremesa</h2>
                 <div class="grid-container">
                     <!-- SG-1000 -->
                     <button class="button" onclick="abrirModal('modalSG1000')">
@@ -99,6 +100,13 @@
                     </div>
 
                 </div>
+                <h2 class="categoria-titulo">Portatil</h2>
+                <div class="grid-container">
+                    <button class="button" type="button" onclick="abrirModal('modalGameGear')"><span class="texto-modelo">Game Gear</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalNomad')"><span class="texto-modelo">Nomad</span></button>
+                </div>
+                <div id="modalGameGear" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalGameGear')">&times;</span><h3>Game Gear</h3><p>Consola portátil a color de Sega lanzada en 1990. Compartía parte de su tecnología con Master System y destacó por su pantalla en color y su catálogo de juegos adaptados de Sega.</p></div></div>
+                <div id="modalNomad" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalNomad')">&times;</span><h3>Nomad</h3><p>Portátil de Sega lanzada en 1995. Permitía jugar a cartuchos de Mega Drive y conectarla a un televisor, combinando la experiencia portátil con la sobremesa.</p></div></div>
                 <nav>
                     <h2>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h2>
                 </nav>

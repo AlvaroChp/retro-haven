@@ -17,6 +17,7 @@
                 <div id="reloj"></div>
             </header>
             <main>
+                <h2 class="categoria-titulo">Sobremesa</h2>
                 <div class="grid-container">
                     <!-- PS1 -->
                     <button class="button" onclick="abrirModal('modalPS1')">
@@ -96,6 +97,13 @@
                         </div>
                     </div>
                 </div>
+                <h2 class="categoria-titulo">Portatil</h2>
+                <div class="grid-container">
+                    <button class="button" type="button" onclick="abrirModal('modalPSP')"><span class="texto-modelo">PlayStation Portable</span></button>
+                    <button class="button" type="button" onclick="abrirModal('modalPSVita')"><span class="texto-modelo">PlayStation Vita</span></button>
+                </div>
+                <div id="modalPSP" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalPSP')">&times;</span><h3>PlayStation Portable</h3><p>La PSP llegó en 2004 como la primera gran portátil de Sony. Utilizaba discos UMD, ofrecía gráficos avanzados para su época y permitía jugar, escuchar música y ver vídeos.</p></div></div>
+                <div id="modalPSVita" class="modal"><div class="modal-contenido"><span class="cerrar" onclick="cerrarModal('modalPSVita')">&times;</span><h3>PlayStation Vita</h3><p>Portátil de Sony lanzada en 2011 con pantalla táctil, panel táctil trasero y conectividad online. Su catálogo combinó producciones propias, juegos independientes y experiencias adaptadas de PlayStation.</p></div></div>
                 <nav>
                 <h2>Haz clic <a href="../consolas.html"><span style="color: red;">aquí</span></a> para volver a CONSOLAS.</h2>
                 </nav>

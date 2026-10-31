@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sega: [
                 { modelo: "Master System", imagen: "mastersystem.png", descripcion: "Master System(1985)" },
                 { modelo: "Mega Drive", imagen: "megadrive.png", descripcion: "Mega Drive (1988)" },
-                { modelo: "Sega Saturn", imagen: "segasaturn.png", descripcion: "Sega Saturn (1994)" },
+                { modelo: "Sega Saturn", imagen: "saturn.png", descripcion: "Sega Saturn (1994)" },
                 { modelo: "Dreamcast", imagen: "dreamcast.png", descripcion: "Dreamcast (1998)" }
             ],
             sony: [
@@ -57,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 { modelo: "PlayStation 2", imagen: "ps2.png", descripcion: "PlayStation 2 (2000) la videoconsola más vendida de la historia." }
             ],
             atari: [
-                { modelo: "Atari 2600", imagen: "atari2600.png", descripcion: "Atari 2600 (1977)" },
-                { modelo: "Atari 5200", imagen: "atari5200.png", descripcion: "Atari 5200 (1982)" },
-                { modelo: "Atari 7800", imagen: "atari7800.png", descripcion: "Atari 7800 (1984)" },
-                { modelo: "Atari Jaguar", imagen: "atarijaguar.png", descripcion: "Atari Jaguar (1993)" }
+                { modelo: "Atari 2600", imagen: "2600.png", descripcion: "Atari 2600 (1977)" },
+                { modelo: "Atari 5200", imagen: "5200.png", descripcion: "Atari 5200 (1982)" },
+                { modelo: "Atari 7800", imagen: "7800.png", descripcion: "Atari 7800 (1984)" },
+                { modelo: "Atari Jaguar", imagen: "jaguar.png", descripcion: "Atari Jaguar (1993)" }
             ]
         };
 
