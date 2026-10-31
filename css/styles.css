@@ -172,6 +172,21 @@ a:hover { /* para que las letras tengan un brillo al poner el cursor encima*/
   gap: 1.5rem;
 }
 
+.grid-container:has(> .boton1) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 900px;
+  gap: 0.75rem;
+}
+
+.grid-container:has(> .boton1) .button {
+  padding: 2px;
+}
+
+.grid-container:has(> .boton1) .button img {
+  max-width: 98%;
+  max-height: 94%;
+}
+
 .boton1 {
   position: relative;
   text-align: center;
@@ -422,22 +437,6 @@ a:hover { /* para que las letras tengan un brillo al poner el cursor encima*/
 
 /* ÍTEMS JAVASCRIPT */
 
-/*estilo para el reloj*/
-#reloj {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  user-select: none; /*para que no se pueda seleccionar el texto*/
-  z-index: 9999; /*Que esté siempre encima*/
-}
-
-
 /*estilo para el reproductor de audio */
 #reproductor_musica {
   position: fixed;
@@ -674,35 +673,6 @@ a:hover { /* para que las letras tengan un brillo al poner el cursor encima*/
     transform: scale(1.05);
 }
 
-/*botón del link a la API de la ubicación*/
-
-.boton_ubicacion {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 20px;
-  font-family: Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.6);
-  min-width: max-content;
-  color: white;
-  padding: 10px 10px;
-  display: inline-flex;
-  border-radius: 10px;
-  white-space: nowrap;
-  text-decoration: none;
-  z-index: 9999;
-}
-
-/* Aplicar solo al texto */
-.boton_ubicacion .texto_hover {
-  display: inline-block;
-  transition: transform 0.5s;
-}
-
-.boton_ubicacion:hover .texto_hover {
-  transform: scale(1.05);
-}
-
 @media (max-width: 700px) {
   body {
     padding: 0.75rem;
@@ -720,20 +690,29 @@ a:hover { /* para que las letras tengan un brillo al poner el cursor encima*/
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .grid-container:has(> .boton1) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
   nav {
+    flex-direction: column;
+    align-items: center;
     gap: 0.75rem 1rem;
     margin: 2rem auto;
   }
 
   nav > a {
-    flex: 1 1 8rem;
-    text-align: center;
+    width: 12rem;
+    text-align: left;
     font-size: 1rem;
   }
 
   nav > a img {
-    width: 2rem;
-    height: 2rem;
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.35rem;
     object-fit: contain;
     vertical-align: middle;
   }
@@ -754,25 +733,6 @@ a:hover { /* para que las letras tengan un brillo al poner el cursor encima*/
 
   .slider-track img {
     width: 145px;
-  }
-
-  .boton_ubicacion {
-    position: static;
-    display: flex;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto 1rem;
-    font-size: 0.9rem;
-    white-space: normal;
-    text-align: center;
-  }
-
-  #reloj {
-    position: static;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto 1rem;
-    font-size: 0.85rem;
   }
 
   #reproductor_musica {
